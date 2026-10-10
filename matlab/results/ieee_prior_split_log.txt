@@ -1,0 +1,28 @@
+
+[1/2] 建立 LOXO 真值转移核（网格 40–200 BPM, K=161）
+{Error using accumarray
+Third input must be a full row vector with one element for each column of the first input.
+
+Error in exp_ieee_prior_split (line 42)
+        C = C + accumarray(idx, 1, [K K]);
+} 
+
+[1/2] 建立 LOXO 真值转移核（网格 40–200 BPM, K=161）
+      完成；单核密度中位数 = 0.005181，非零占比 = 1.000
+
+[2/2] 2x2 对照（IEEE 全 23 条，subject-macro MAE ± 记录间 SD）
+  v1 config : truth-kernel + band 1.0-3.0, no taper    MAE=16.4921  SD=18.5552
+  v2 config : analytic     + band 0.75-3.0, taper 30   MAE=6.7959  SD=9.2666
+  analytic  + band 1.0-3.0, no taper                   MAE=5.2779  SD=5.5553
+  truth-kernel + band 0.75-3.0, taper 30               MAE=12.4704  SD=14.3850
+
+--- 分解（相对 v1 同口径）---
+  v1 同口径（真值核 + v1 带）= 16.4921
+  仅换证据带（真值核 + v2 带）= 12.4704  → 证据带贡献 -4.0217 BPM
+  仅去数据先验（解析核 + v1 带）= 5.2779  → 数据先验贡献 -11.2142 BPM
+  两者同时换（= 现行 v2）    = 6.7959  → 合计 -9.6962 BPM
+
+  参照：v1 原稿报告 1.50（真值核 + v1 带 + moving(4) 平滑）
+        v1 未平滑     1.94162
+
+[saved] results/ieee_prior_split.mat

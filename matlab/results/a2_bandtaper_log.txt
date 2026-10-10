@@ -1,0 +1,28 @@
+
+######## DALIA ########
+  wide  (0.75-3.0) + taper 30    MAE=5.8302  SD=2.1847
+  wide  (0.75-3.0) + taper 0     MAE=11.4697  SD=6.9214
+  narrow(1.0-3.0) + taper 30     MAE=5.9576  SD=2.2471
+  narrow(1.0-3.0) + taper 0      MAE=11.4649  SD=6.9110
+
+######## WESAD ########
+  wide  (0.75-3.0) + taper 30    MAE=5.7569  SD=3.2355
+  wide  (0.75-3.0) + taper 0     MAE=9.1401  SD=4.4792
+  narrow(1.0-3.0) + taper 30     MAE=5.7569  SD=3.2355
+  narrow(1.0-3.0) + taper 0      MAE=9.1320  SD=4.4739
+
+[saved] results/a2_bandtaper.mat
+
+######## DALIA ########
+  wide  (0.75-3.0) + taper 30    MAE=5.8302  SD=2.1847
+  wide  (0.75-3.0) + taper 0     MAE=11.4697  SD=6.9214
+  narrow(1.0-3.0) + taper 30     MAE=8.0327  SD=3.8697
+  narrow(1.0-3.0) + taper 0      MAE=8.6048  SD=3.3258
+
+######## WESAD ########
+  wide  (0.75-3.0) + taper 30    MAE=5.7569  SD=3.2355
+  wide  (0.75-3.0) + taper 0     MAE=9.1401  SD=4.4792
+  narrow(1.0-3.0) + taper 30     MAE=9.4241  SD=8.4581
+  narrow(1.0-3.0) + taper 0      MAE=7.7727  SD=4.3096
+
+[saved] results/a2_bandtaper.mat

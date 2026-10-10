@@ -1,0 +1,31 @@
+rec 10: base  48.87 | LBP-only  48.65 | full  43.02 | gain  +5.85
+rec 17: base  16.61 | LBP-only  16.88 | full  21.30 | gain  -4.70
+rec 14: base  17.07 | LBP-only  17.14 | full  16.82 | gain  +0.25
+rec  6: base   2.51 | LBP-only   2.51 | full   8.06 | gain  -5.55
+rec 16: base   5.14 | LBP-only   5.14 | full   7.61 | gain  -2.47
+rec  4: base   1.92 | LBP-only   1.89 | full   2.36 | gain  -0.44
+rec 20: base   2.87 | LBP-only   2.87 | full   4.65 | gain  -1.79
+rec 22: base   3.99 | LBP-only   3.99 | full   3.68 | gain  +0.31
+rec 12: base   2.16 | LBP-only   2.16 | full   2.61 | gain  -0.44
+rec 18: base   2.49 | LBP-only   2.49 | full   4.70 | gain  -2.20
+rec  2: base   3.57 | LBP-only   3.57 | full   5.02 | gain  -1.44
+rec  8: base   2.01 | LBP-only   2.01 | full   3.77 | gain  -1.76
+--> selected recording 22 (full 3.68 vs base 3.99)
+[saved] D:\小论文\manuscript_JBHI_IEEEtran\revision\audit\method_dev\..\..\..\figures\fig_traj_arms_A2.pdf
+S1 : base   5.94 | LBP-only   5.99 | full   5.12 | gain  +0.82
+S2 : base   6.31 | LBP-only   6.33 | full   5.72 | gain  +0.59
+S3 : base   5.02 | LBP-only   4.98 | full   4.26 | gain  +0.76
+S4 : base   9.88 | LBP-only   9.87 | full   8.89 | gain  +0.99
+S5 : base  21.11 | LBP-only  21.58 | full   5.22 | gain +15.88
+S6 : base  10.09 | LBP-only  10.05 | full   6.77 | gain  +3.32
+S7 : base   3.10 | LBP-only   3.12 | full   3.58 | gain  -0.47
+S8 : base   8.75 | LBP-only   8.86 | full   6.95 | gain  +1.80
+--> selected PPG-DaLiA subject 5 (full 5.22 vs base 21.11)
+ground-truth field: A (2370990 samples)
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+[> In exp_a2_fig_traj_dalia (line 44)] 
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+[> In exp_a2_fig_traj_dalia (line 44)] 
+[Warning: Imaginary parts of complex X and/or Y arguments ignored.] 
+[> In exp_a2_fig_traj_dalia (line 44)] 
+[saved] D:\小论文\manuscript_JBHI_IEEEtran\revision\audit\method_dev\..\..\..\figures\fig_traj_arms_A2.pdf

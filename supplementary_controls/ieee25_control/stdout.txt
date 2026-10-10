@@ -1,0 +1,59 @@
+PROBE new_dir = D:\è¨¸¸ï∂\manuscript_JBHI_IEEEtran\revision\audit\ieee25_isolated_20261004
+PROBE method_dev_read_only = D:\è¨¸¸ï∂\manuscript_JBHI_IEEEtran\revision\audit\method_dev
+PROBE data = D:\è¨¸¸ï∂\¸¸¸¸ë„¸¸\PPG-master\all_data
+PROBE which ds5 = D:\è¨¸¸ï∂\manuscript_JBHI_IEEEtran\revision\audit\ieee25_isolated_20261004\ds5.m
+PROBE which prep_ieee25 = D:\è¨¸¸ï∂\manuscript_JBHI_IEEEtran\revision\audit\ieee25_isolated_20261004\prep_ieee25.m
+PROBE cache = D:\è¨¸¸ï∂\manuscript_JBHI_IEEEtran\revision\audit\ieee25_isolated_20261004\cache25 | helper_path_appended = 0
+BASELINE label = 125-Hz saved cache2 via a2_core.mat (read-only), mean = 6.765860267452
+BASELINE ref check |mean-6.765860267452| = 2.345e-13 (informational only)
+band bins: 513 (0-12.5 Hz)
+  ieee S1  DATA_01_TYPE01     test=0  nWin= 148  gt=[69.6 165.6]  saved
+  ieee S2  DATA_02_TYPE02     test=0  nWin= 148  gt=[69.5 148.6]  saved
+  ieee S3  DATA_03_TYPE02     test=0  nWin= 140  gt=[83.7 160.4]  saved
+  ieee S4  DATA_04_TYPE02     test=0  nWin= 146  gt=[78.9 164.1]  saved
+  ieee S5  DATA_05_TYPE02     test=0  nWin= 146  gt=[101.2 166.8]  saved
+  ieee S6  DATA_06_TYPE02     test=0  nWin= 150  gt=[68.7 153.1]  saved
+  ieee S7  DATA_07_TYPE02     test=0  nWin= 143  gt=[92.1 157.6]  saved
+  ieee S8  DATA_08_TYPE02     test=0  nWin= 160  gt=[74.5 150.8]  saved
+  ieee S9  DATA_09_TYPE02     test=0  nWin= 149  gt=[74.3 151.3]  saved
+  ieee S10 DATA_10_TYPE02     test=0  nWin= 149  gt=[121.4 176.7]  saved
+  ieee S11 DATA_11_TYPE02     test=0  nWin= 143  gt=[110.1 170.6]  saved
+  ieee S12 DATA_12_TYPE02     test=0  nWin= 146  gt=[96.8 170.3]  saved
+  ieee S13 DATA_S04_T01       test=0  nWin= 107  gt=[66.3 107.1]  saved
+  ieee S14 TEST_S01_T01       test=1  nWin= 142  gt=[59.1 101.9]  saved
+  ieee S15 TEST_S02_T01       test=1  nWin= 137  gt=[60.6 101.2]  saved
+  ieee S16 TEST_S02_T02       test=1  nWin= 144  gt=[76.9 147.7]  saved
+  ieee S17 TEST_S03_T02       test=1  nWin= 152  gt=[108.0 172.8]  saved
+  ieee S18 TEST_S04_T02       test=1  nWin= 101  gt=[101.0 148.0]  saved
+  ieee S19 TEST_S05_T02       test=1  nWin= 157  gt=[112.2 146.0]  saved
+  ieee S20 TEST_S06_T01       test=1  nWin= 132  gt=[64.7 117.2]  saved
+  ieee S21 TEST_S06_T02       test=1  nWin= 142  gt=[115.0 165.6]  saved
+  ieee S22 TEST_S07_T02       test=1  nWin= 121  gt=[112.9 146.8]  saved
+  ieee S23 TEST_S08_T01       test=1  nWin= 100  gt=[80.0 92.7]  saved
+[saved] cache2/ieee_S1..S23.mat + ieee_meta.mat
+GUARD S1  DATA_01_TYPE01     nWin= 148 gt=[69.6 165.6] exact
+GUARD S2  DATA_02_TYPE02     nWin= 148 gt=[69.5 148.6] exact
+GUARD S3  DATA_03_TYPE02     nWin= 140 gt=[83.7 160.4] exact
+GUARD S4  DATA_04_TYPE02     nWin= 146 gt=[78.9 164.1] exact
+GUARD S5  DATA_05_TYPE02     nWin= 146 gt=[101.2 166.8] exact
+GUARD S6  DATA_06_TYPE02     nWin= 150 gt=[68.7 153.1] exact
+GUARD S7  DATA_07_TYPE02     nWin= 143 gt=[92.1 157.6] exact
+GUARD S8  DATA_08_TYPE02     nWin= 160 gt=[74.5 150.8] exact
+GUARD S9  DATA_09_TYPE02     nWin= 149 gt=[74.3 151.3] exact
+GUARD S10 DATA_10_TYPE02     nWin= 149 gt=[121.4 176.7] exact
+GUARD S11 DATA_11_TYPE02     nWin= 143 gt=[110.1 170.6] exact
+GUARD S12 DATA_12_TYPE02     nWin= 146 gt=[96.8 170.3] exact
+GUARD S13 DATA_S04_T01       nWin= 107 gt=[66.3 107.1] exact
+GUARD S14 TEST_S01_T01       nWin= 142 gt=[59.1 101.9] exact
+GUARD S15 TEST_S02_T01       nWin= 137 gt=[60.6 101.2] exact
+GUARD S16 TEST_S02_T02       nWin= 144 gt=[76.9 147.7] exact
+GUARD S17 TEST_S03_T02       nWin= 152 gt=[108.0 172.8] exact
+GUARD S18 TEST_S04_T02       nWin= 101 gt=[101.0 148.0] exact
+GUARD S19 TEST_S05_T02       nWin= 157 gt=[112.2 146.0] exact
+GUARD S20 TEST_S06_T01       nWin= 132 gt=[64.7 117.2] exact
+GUARD S21 TEST_S06_T02       nWin= 142 gt=[115.0 165.6] exact
+GUARD S22 TEST_S07_T02       nWin= 121 gt=[112.9 146.8] exact
+GUARD S23 TEST_S08_T01       nWin= 100 gt=[80.0 92.7] exact
+GUARD 23/23 exact: nWin, gt, sid, X200, Xa200x3, hop50, fb=fsd/1024, fs tags, record order
+RESULT ALL23 MAE 25Hz = 6.757875 | 125Hz = 6.765860 | delta(25-125) = -0.007985
+SAVED results.json + ieee25_results.mat in D:\è¨¸¸ï∂\manuscript_JBHI_IEEEtran\revision\audit\ieee25_isolated_20261004

@@ -1,0 +1,22 @@
+
+######## DALIA ########
+  gate off (paper config)      MAE=5.9584  SD=2.1640  cov=0.9993
+  hard, keep,   N_hist=15      MAE=7.1250  SD=3.6484  cov=0.9993
+  hard, keep,   N_hist=8-30    MAE=7.3987  SD=3.7033  cov=0.9993
+  hard, append, N_hist=15      MAE=7.0602  SD=3.5487  cov=0.9993
+  [paired vs off]  delta(gate - off)
+  hard, keep,   N_hist=15       +1.1666  raw p=0.0318  Holm p=0.0777
+  hard, keep,   N_hist=8-30     +1.4404  raw p=0.0259  Holm p=0.0777
+  hard, append, N_hist=15       +1.1018  raw p=0.0279  Holm p=0.0777
+
+######## WESAD ########
+  gate off (paper config)      MAE=5.7836  SD=3.2152  cov=1.0000
+  hard, keep,   N_hist=15      MAE=6.4809  SD=4.2361  cov=1.0000
+  hard, keep,   N_hist=8-30    MAE=6.4352  SD=4.1307  cov=1.0000
+  hard, append, N_hist=15      MAE=6.5087  SD=4.3270  cov=1.0000
+  [paired vs off]  delta(gate - off)
+  hard, keep,   N_hist=15       +0.6973  raw p=0.8434  Holm p=1.0000
+  hard, keep,   N_hist=8-30     +0.6516  raw p=0.7223  Holm p=1.0000
+  hard, append, N_hist=15       +0.7252  raw p=0.9698  Holm p=1.0000
+
+[saved] results/gate_hard.mat

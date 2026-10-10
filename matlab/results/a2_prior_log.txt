@@ -1,0 +1,17 @@
+
+[1/2] 构建 LOXO 真值核（行归一版 + 计数-log 版）
+
+[2/2] 5 臂（全部在 A' 配置下；真值核臂逐记录 23 次运行）
+  row-norm truth kernel + band 1.0, taper 0    MAE=16.6431  SD=19.2728
+  count-log truth kernel + band 1.0, taper 0   MAE=15.1320  SD=20.2101
+  analytic + band 1.0, taper 0                 MAE=5.3552  SD=5.6677
+  analytic + band 0.75, taper 30 (= A')        MAE=6.7659  SD=9.2241
+  row-norm truth kernel + band 0.75, taper 30  MAE=12.4724  SD=15.3681
+
+--- 分解（A' 配置）---
+  原带无斜坡：解析核 5.3552 | 行归一真值核 16.6431 | 计数-log 真值核 15.1320
+  评估带+斜坡：解析核 6.7659（= headline）| 行归一真值核 12.4724
+  带/斜坡净效应（解析核）：+1.4107 BPM
+  真值核净效应（同带同斜坡）：+11.2879 BPM（行归一）
+
+[saved] results/a2_prior.mat

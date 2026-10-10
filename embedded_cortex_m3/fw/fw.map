@@ -1,0 +1,250 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
+                              main.o (__aeabi_dmul)
+C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+                              main.o (__aeabi_i2d)
+C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+                              main.o (__aeabi_d2f)
+C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                              main.o (__aeabi_fadd)
+C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                              main.o (__aeabi_fcmplt)
+C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memset.o)
+                              startup.o (memset)
+C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)
+                              startup.o (memcpy)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 startup.o
+ .data          0x00000000        0x0 startup.o
+ .bss           0x00000000        0x0 startup.o
+ .comment       0x00000000       0x46 startup.o
+ .text          0x00000000        0x0 main.o
+ .data          0x00000000        0x0 main.o
+ .bss           0x00000000        0x0 main.o
+ .comment       0x00000000       0x46 main.o
+ .text          0x00000000        0x0 data.o
+ .data          0x00000000        0x0 data.o
+ .bss           0x00000000        0x0 data.o
+ .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+ .text          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memset.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memset.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memset.o)
+ .data          0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)
+ .bss           0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)
+ .ARM.extab     0x00000000        0x0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00040000         xr
+RAM              0x20000000         0x00010000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD startup.o
+LOAD main.o
+LOAD data.o
+START GROUP
+LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a
+LOAD C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a
+END GROUP
+                0x20010000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+
+.isr_vector     0x08000000       0x40
+ *(.isr_vector)
+ .isr_vector    0x08000000       0x40 startup.o
+                0x08000000                g_vectors
+
+.text           0x08000040    0x29640
+ *(.text*)
+ .text.Default_Handler
+                0x08000040        0x4 startup.o
+ .text.Reset_Handler
+                0x08000044       0x50 startup.o
+                0x08000044                Reset_Handler
+ .text.run_variant
+                0x08000094      0x2f4 main.o
+ .text.startup.main
+                0x08000388      0x170 main.o
+                0x08000388                main
+ .text          0x080004f8      0x254 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
+                0x080004f8                __muldf3
+                0x080004f8                __aeabi_dmul
+ .text          0x0800074c      0x378 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+                0x0800074c                __aeabi_drsub
+                0x08000754                __aeabi_dsub
+                0x08000754                __subdf3
+                0x08000758                __aeabi_dadd
+                0x08000758                __adddf3
+                0x080009d0                __floatunsidf
+                0x080009d0                __aeabi_ui2d
+                0x080009f0                __floatsidf
+                0x080009f0                __aeabi_i2d
+                0x08000a14                __aeabi_f2d
+                0x08000a14                __extendsfdf2
+                0x08000a58                __floatundidf
+                0x08000a58                __aeabi_ul2d
+                0x08000a68                __floatdidf
+                0x08000a68                __aeabi_l2d
+ .text          0x08000ac4       0xa0 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+                0x08000ac4                __truncdfsf2
+                0x08000ac4                __aeabi_d2f
+ .text          0x08000b64      0x21c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                0x08000b64                __aeabi_frsub
+                0x08000b6c                __subsf3
+                0x08000b6c                __aeabi_fsub
+                0x08000b70                __aeabi_fadd
+                0x08000b70                __addsf3
+                0x08000cd0                __aeabi_ui2f
+                0x08000cd0                __floatunsisf
+                0x08000cd8                __aeabi_i2f
+                0x08000cd8                __floatsisf
+                0x08000cf4                __aeabi_ul2f
+                0x08000cf4                __floatundisf
+                0x08000d04                __aeabi_l2f
+                0x08000d04                __floatdisf
+ .text          0x08000d80       0xec C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                0x08000d80                __gesf2
+                0x08000d80                __gtsf2
+                0x08000d88                __lesf2
+                0x08000d88                __ltsf2
+                0x08000d90                __nesf2
+                0x08000d90                __eqsf2
+                0x08000d90                __cmpsf2
+                0x08000df0                __aeabi_cfrcmple
+                0x08000df8                __aeabi_cfcmpeq
+                0x08000df8                __aeabi_cfcmple
+                0x08000e08                __aeabi_fcmpeq
+                0x08000e1c                __aeabi_fcmplt
+                0x08000e30                __aeabi_fcmple
+                0x08000e44                __aeabi_fcmpge
+                0x08000e58                __aeabi_fcmpgt
+ .text.memset   0x08000e6c       0x9c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memset.o)
+                0x08000e6c                memset
+ .text          0x08000f08       0xec C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)
+                0x08000f08                memcpy
+ *(.rodata*)
+ .rodata.MCU_A  0x08000ff4      0x284 main.o
+ *fill*         0x08001278        0x8 
+ .rodata        0x08001280    0x28400 data.o
+                0x08001280                win_data
+                0x08029680                        . = ALIGN (0x4)
+
+.glue_7         0x08029680        0x0
+ .glue_7        0x08029680        0x0 linker stubs
+
+.glue_7t        0x08029680        0x0
+ .glue_7t       0x08029680        0x0 linker stubs
+
+.vfp11_veneer   0x08029680        0x0
+ .vfp11_veneer  0x08029680        0x0 linker stubs
+
+.v4_bx          0x08029680        0x0
+ .v4_bx         0x08029680        0x0 linker stubs
+
+.iplt           0x08029680        0x0
+ .iplt          0x08029680        0x0 startup.o
+
+.ARM.exidx      0x08029680        0x8
+ *(.ARM.exidx*)
+ .ARM.exidx     0x08029680        0x8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)
+                0x08029688                        _sidata = LOADADDR (.data)
+
+.rel.dyn        0x08029688        0x0
+ .rel.iplt      0x08029688        0x0 startup.o
+
+.data           0x20000000        0x0 load address 0x08029688
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sdata = .
+ *(.data*)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _edata = .
+
+.igot.plt       0x20000000        0x0 load address 0x08029688
+ .igot.plt      0x20000000        0x0 startup.o
+
+.bss            0x20000000      0xc94 load address 0x08029688
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sbss = .
+ *(.bss*)
+ .bss.pring     0x20000000      0x284 main.o
+ .bss.gt        0x20000284      0x284 main.o
+ .bss.vnew      0x20000508      0x284 main.o
+ .bss.vold      0x2000078c      0x284 main.o
+ .bss.u         0x20000a10      0x284 main.o
+ *(COMMON)
+                0x20000c94                        . = ALIGN (0x4)
+                0x20000c94                        _ebss = .
+
+.results        0x20000c94     0x1014 load address 0x08029688
+                0x20000c94                        . = ALIGN (0x4)
+ *(.results)
+ .results       0x20000c94     0x1014 main.o
+                0x20001ca8                        . = ALIGN (0x4)
+
+/DISCARD/
+ *(.comment)
+ *(.note*)
+OUTPUT(fw.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x2b
+ .ARM.attributes
+                0x00000000       0x2d startup.o
+ .ARM.attributes
+                0x0000002d       0x2d main.o
+ .ARM.attributes
+                0x0000005a       0x1b data.o
+ .ARM.attributes
+                0x00000075       0x1d C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
+ .ARM.attributes
+                0x00000092       0x1d C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x000000af       0x1d C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x000000cc       0x1d C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x000000e9       0x1d C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+ .ARM.attributes
+                0x00000106       0x2d C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memset.o)
+ .ARM.attributes
+                0x00000133       0x1b C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)
+
+.debug_line_str
+                0x00000000      0x1b6
+ .debug_line_str
+                0x00000000      0x1b6 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
+                                 0xca (size before relaxing)
+ .debug_line_str
+                0x000001b6       0xca C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_line_str
+                0x000001b6       0xca C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .debug_line_str
+                0x000001b6       0xca C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_line_str
+                0x000001b6       0xca C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+ .debug_line_str
+                0x000001b6       0xdf C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)
+
+.debug_frame    0x00000000      0x268
+ .debug_frame   0x00000000       0x30 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_muldf3.o)
+ .debug_frame   0x00000030       0xac C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x000000dc       0x24 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x00000100       0x4c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x0000014c       0xc8 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libgcc.a(_arm_cmpsf2.o)
+ .debug_frame   0x00000214       0x2c C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memset.o)
+ .debug_frame   0x00000240       0x28 C:/Program Files (x86)/Arm GNU Toolchain arm-none-eabi/14.2 rel1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7-m/nofp\libc.a(libc_a-memcpy.o)

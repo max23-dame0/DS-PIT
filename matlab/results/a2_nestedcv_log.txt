@@ -1,0 +1,32 @@
+
+######## DALIA : 12 configs x 15 subjects (A') ########
+  band=0.70 taper=20  all15 MAE=8.229
+  band=0.70 taper=25  all15 MAE=7.067
+  band=0.70 taper=30  all15 MAE=6.297
+  band=0.75 taper=20  all15 MAE=7.313
+  band=0.75 taper=25  all15 MAE=6.313
+  band=0.75 taper=30  all15 MAE=5.830
+  band=0.80 taper=20  all15 MAE=6.675
+  band=0.80 taper=25  all15 MAE=6.055
+  band=0.80 taper=30  all15 MAE=5.736
+  band=0.85 taper=20  all15 MAE=6.392
+  band=0.85 taper=25  all15 MAE=5.977
+  band=0.85 taper=30  all15 MAE=5.861
+  nested CV (outer) mean=5.860  SD=1.486 | in-sample=5.736  optimism=0.124
+
+######## WESAD : 12 configs x 15 subjects (A') ########
+  band=0.70 taper=20  all15 MAE=7.258
+  band=0.70 taper=25  all15 MAE=6.603
+  band=0.70 taper=30  all15 MAE=6.034
+  band=0.75 taper=20  all15 MAE=6.776
+  band=0.75 taper=25  all15 MAE=5.999
+  band=0.75 taper=30  all15 MAE=5.757
+  band=0.80 taper=20  all15 MAE=6.195
+  band=0.80 taper=25  all15 MAE=5.910
+  band=0.80 taper=30  all15 MAE=5.927
+  band=0.85 taper=20  all15 MAE=6.192
+  band=0.85 taper=25  all15 MAE=6.250
+  band=0.85 taper=30  all15 MAE=6.270
+  nested CV (outer) mean=6.416  SD=2.379 | in-sample=5.757  optimism=0.660
+
+[saved] results/a2_nestedcv_D3.mat

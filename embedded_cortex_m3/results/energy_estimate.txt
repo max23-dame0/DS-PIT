@@ -1,0 +1,18 @@
+=== EMB-01 energy estimate (THEORETICAL, datasheet-based, NOT measured) ===
+V = 3.30 V nominal;  I from datasheet typical run-mode, code from Flash
+
+tag        clk   W  t_banded_ms  E_lo_mJ  E_hi_mJ  P_avg_lo_mW(@2s)  P_avg_hi_mW
+f24w13       24  13     12.122     0.480     0.680             0.240       0.340
+f48w13       48  13      7.004     0.555     0.786             0.277       0.393
+f72w07       72   7      3.499     0.416     0.577             0.208       0.289
+f72w13_r1    72  13      5.887     0.699     0.971             0.350       0.486
+f72w13_r2    72  13      5.887     0.699     0.971             0.350       0.486
+f72w13_r3    72  13      5.887     0.699     0.971             0.350       0.486
+f72w25       72  25     10.527     1.251     1.737             0.625       0.868
+
+Notes:
+- E = V*I*t uses MEASURED t (SWD-read DWT cycle count / measured clk); I is datasheet-typical.
+- Low bound = all peripherals disabled (this firmware enables none);
+  high bound = all peripherals enabled (conservative).
+- P_avg assumes one decode per 2 s hop and ignores sleep current.
+- STATUS: ESTIMATE ONLY.  A real energy number requires a shunt/profiler measurement.

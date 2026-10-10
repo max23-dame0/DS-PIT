@@ -1,0 +1,18 @@
+
+######## DALIA ########
+  gate off (paper config)        MAE=5.9584  SD=2.1640  cov=0.9993
+  gate on  (N_hist=15)           MAE=7.3777  SD=3.7895  cov=0.9993
+  gate on  (N_hist=8-30, ds3)    MAE=7.3533  SD=3.6924  cov=0.9993
+  [paired vs off]  delta(on-off)   raw p   Holm p
+  gate on  (N_hist=15)             +1.4193   0.0327   0.0654
+  gate on  (N_hist=8-30, ds3)      +1.3949   0.0379   0.0654
+
+######## WESAD ########
+  gate off (paper config)        MAE=5.7836  SD=3.2152  cov=1.0000
+  gate on  (N_hist=15)           MAE=7.2864  SD=5.0884  cov=1.0000
+  gate on  (N_hist=8-30, ds3)    MAE=6.5297  SD=4.2424  cov=1.0000
+  [paired vs off]  delta(on-off)   raw p   Holm p
+  gate on  (N_hist=15)             +1.5028   0.2311   0.4622
+  gate on  (N_hist=8-30, ds3)      +0.7461   0.4047   0.4622
+
+[saved] results/gate_unified.mat

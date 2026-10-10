@@ -1,0 +1,54 @@
+grid: 12 configs (band lower edge x edge taper)
+
+######## DALIA : 12 configs x 15 subjects ########
+  band=0.70 taper=20  all15 MAE=8.313
+  band=0.70 taper=25  all15 MAE=7.190
+  band=0.70 taper=30  all15 MAE=6.463
+  band=0.75 taper=20  all15 MAE=7.391
+  band=0.75 taper=25  all15 MAE=6.460
+  band=0.75 taper=30  all15 MAE=5.958
+  band=0.80 taper=20  all15 MAE=6.788
+  band=0.80 taper=25  all15 MAE=6.188
+  band=0.80 taper=30  all15 MAE=5.831
+  band=0.85 taper=20  all15 MAE=6.486
+  band=0.85 taper=25  all15 MAE=6.076
+  band=0.85 taper=30  all15 MAE=5.917
+
+  --- dalia nested CV ---
+  fold | held-out | selected band/taper | outer MAE
+   1   | [1 6 11] | 0.80 / 30 | 6.853
+   2   | [2 7 12] | 0.80 / 30 | 5.534
+   3   | [3 8 13] | 0.85 / 30 | 5.702
+   4   | [4 9 14] | 0.75 / 30 | 7.973
+   5   | [5 10 15] | 0.80 / 30 | 4.252
+  NESTED CV (outer) mean = 6.063   SD across folds = 1.411
+  in-sample optimal (all 15) = 5.831  at band=0.80 taper=30  [乐观值]
+  optimism = 0.232 BPM
+
+######## WESAD : 12 configs x 15 subjects ########
+  band=0.70 taper=20  all15 MAE=7.302
+  band=0.70 taper=25  all15 MAE=6.626
+  band=0.70 taper=30  all15 MAE=6.187
+  band=0.75 taper=20  all15 MAE=6.871
+  band=0.75 taper=25  all15 MAE=6.099
+  band=0.75 taper=30  all15 MAE=5.784
+  band=0.80 taper=20  all15 MAE=6.286
+  band=0.80 taper=25  all15 MAE=5.948
+  band=0.80 taper=30  all15 MAE=5.939
+  band=0.85 taper=20  all15 MAE=6.270
+  band=0.85 taper=25  all15 MAE=6.223
+  band=0.85 taper=30  all15 MAE=6.254
+
+  --- wesad nested CV ---
+  fold | held-out | selected band/taper | outer MAE
+   1   | [1 6 11] | 0.75 / 30 | 5.930
+   2   | [2 7 12] | 0.85 / 30 | 8.731
+   3   | [3 8 13] | 0.75 / 30 | 3.496
+   4   | [4 9 14] | 0.75 / 30 | 5.093
+   5   | [5 10 15] | 0.75 / 30 | 8.836
+  NESTED CV (outer) mean = 6.417   SD across folds = 2.331
+  in-sample optimal (all 15) = 5.784  at band=0.75 taper=30  [乐观值]
+  optimism = 0.634 BPM
+
+[saved] results/nestedcv.mat
+目标：DaLiA 6.09 / WESAD 6.28

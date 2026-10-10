@@ -1,0 +1,66 @@
+
+######## DALIA ########
+  headline MAE=5.8302 SD=2.1847  (a2_core 参考见 results/a2_core_log.txt)
+  sanity: max |recomputed - ds5| per-subject MAE = 0.00e+00
+  --- motion quartiles: MAE / bias / >10% / >5% ---
+  Q1  n= 16163  median_motion=0.0060  MAE=2.97  >5%=14.0%  >10%=5.1%
+  Q2  n= 16163  median_motion=0.0615  MAE=4.38  >5%=27.6%  >10%=11.6%
+  Q3  n= 16163  median_motion=0.1325  MAE=6.55  >5%=31.4%  >10%=17.8%
+  Q4  n= 16163  median_motion=0.2149  MAE=9.11  >5%=39.5%  >10%=26.4%
+  --- reliability temperature tau (n=64427 emitted windows with tau) ---
+  mean=1.127  median=1.152  p05=0.882  p95=1.287  min=0.715  max=1.298
+  frac(tau<1)=18.2%  frac(tau>1)=81.8%  frac(|tau-1|<0.02)=6.6%
+  mean|err|: tau<1 (low reliability) 11.70 BPM (n=11736) | tau>=1 4.40 BPM (n=52691)
+  tau quartiles: Q1 (<=1.039) MAE=10.91 | Q4 (>=1.235) MAE=2.36
+  Pearson(tau, |err|) = -0.338
+
+######## WESAD ########
+  headline MAE=5.7569 SD=3.2355  (a2_core 参考见 results/a2_core_log.txt)
+  sanity: max |recomputed - ds5| per-subject MAE = 0.00e+00
+  --- motion quartiles: MAE / bias / >10% / >5% ---
+  Q1  n=  5619  median_motion=0.1031  MAE=2.86  >5%=17.5%  >10%=4.3%
+  Q2  n=  5620  median_motion=0.1968  MAE=3.61  >5%=21.6%  >10%=8.3%
+  Q3  n=  5619  median_motion=0.6415  MAE=6.83  >5%=34.0%  >10%=19.2%
+  Q4  n=  5620  median_motion=4.8318  MAE=9.75  >5%=50.3%  >10%=28.6%
+  --- reliability temperature tau (n=22475 emitted windows with tau) ---
+  mean=1.166  median=1.211  p05=0.912  p95=1.288  min=0.745  max=1.295
+  frac(tau<1)=11.3%  frac(tau>1)=88.7%  frac(|tau-1|<0.02)=4.8%
+  mean|err|: tau<1 (low reliability) 16.52 BPM (n=2546) | tau>=1 4.39 BPM (n=19929)
+  tau quartiles: Q1 (<=1.094) MAE=13.54 | Q4 (>=1.258) MAE=1.87
+  Pearson(tau, |err|) = -0.484
+
+[saved] results/a2_strata.mat
+
+######## DALIA ########
+  headline MAE=5.8302 SD=2.1847  (a2_core 参考见 results/a2_core_log.txt)
+  sanity: max |recomputed - ds5| per-subject MAE = 0.00e+00
+  Pearson(|err|,motion)=0.247  Spearman(|err|,motion)=0.203  (n=64652)
+  --- motion quartiles: n / MAE / >10% / median motion / >5% ---
+  Q1  n= 16163  median_motion=0.0060  MAE=2.97  >5%=14.0%  >10%=5.1%
+  Q2  n= 16163  median_motion=0.0615  MAE=4.38  >5%=27.6%  >10%=11.6%
+  Q3  n= 16163  median_motion=0.1325  MAE=6.55  >5%=31.4%  >10%=17.8%
+  Q4  n= 16163  median_motion=0.2149  MAE=9.11  >5%=39.5%  >10%=26.4%
+  --- reliability temperature tau (n=64427 emitted windows with tau) ---
+  mean=1.127  median=1.152  p05=0.882  p95=1.287  min=0.715  max=1.298
+  frac(tau<1)=18.2%  frac(tau>1)=81.8%  frac(|tau-1|<0.02)=6.6%
+  mean|err|: tau<1 (low reliability) 11.70 BPM (n=11736) | tau>=1 4.40 BPM (n=52691)
+  tau quartiles: Q1 (<=1.039) MAE=10.91 | Q4 (>=1.235) MAE=2.36
+  Pearson(tau, |err|) = -0.338
+
+######## WESAD ########
+  headline MAE=5.7569 SD=3.2355  (a2_core 参考见 results/a2_core_log.txt)
+  sanity: max |recomputed - ds5| per-subject MAE = 0.00e+00
+  Pearson(|err|,motion)=0.332  Spearman(|err|,motion)=0.304  (n=22478)
+  --- motion quartiles: n / MAE / >10% / median motion / >5% ---
+  Q1  n=  5619  median_motion=0.1031  MAE=2.86  >5%=17.5%  >10%=4.3%
+  Q2  n=  5620  median_motion=0.1968  MAE=3.61  >5%=21.6%  >10%=8.3%
+  Q3  n=  5619  median_motion=0.6415  MAE=6.83  >5%=34.0%  >10%=19.2%
+  Q4  n=  5620  median_motion=4.8318  MAE=9.75  >5%=50.3%  >10%=28.6%
+  --- reliability temperature tau (n=22475 emitted windows with tau) ---
+  mean=1.166  median=1.211  p05=0.912  p95=1.288  min=0.745  max=1.295
+  frac(tau<1)=11.3%  frac(tau>1)=88.7%  frac(|tau-1|<0.02)=4.8%
+  mean|err|: tau<1 (low reliability) 16.52 BPM (n=2546) | tau>=1 4.39 BPM (n=19929)
+  tau quartiles: Q1 (<=1.094) MAE=13.54 | Q4 (>=1.258) MAE=1.87
+  Pearson(tau, |err|) = -0.484
+
+[saved] results/a2_strata.mat

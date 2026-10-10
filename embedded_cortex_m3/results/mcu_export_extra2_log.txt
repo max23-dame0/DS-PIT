@@ -1,0 +1,4 @@
+=== EMB-01 extra2 export start 21-Sep-2026 21:14:36 ===
+[export] dalia S3 -> s3 : K=161 nWin=4367 estNaN=2
+[export] wesad S2 -> ws2 : K=161 nWin=3243 estNaN=2
+=== EMB-01 extra2 export done ===

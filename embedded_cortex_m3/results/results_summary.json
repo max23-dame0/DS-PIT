@@ -1,0 +1,366 @@
+{
+  "experiment": "EMB-01",
+  "date": "2026-09-22",
+  "scope": "Decision layer on-device (SSC Gaussian transition + fixed-lag Viterbi + median-3 output filter); spectral front-end computed offline (see D031).",
+  "scope_correction": {
+    "date": "2026-09-23",
+    "reason": "The original scope string above overstates the ported firmware. Appended as a correction; the original string is kept unchanged.",
+    "implemented_on_device": "SSC Gaussian transition and fixed-lag Viterbi decoder; the firmware writes the raw fixed-lag output and ends the per-window timing.",
+    "not_implemented_on_device": [
+      "median-3 output filter (fw/main.c run_variant has no output filtering; the median-of-3 filter exists only in ds5.m:359-360)",
+      "the reliability-temperature state update of the evaluated configuration (ds5.m:259-264)"
+    ],
+    "exported_configuration": "Temperature disabled. exp_export_mcu.m regressed against 5.9584/5.7836 and did not enable a2_cfg. ds5.m:257 stores logL before the temperature multiplication at ds5.m:259-264, so adding a2_cfg to the export script alone would not make the exported observations temperature-aware.",
+    "unaffected": "The measured timing, the window-for-window fidelity (254/254) and the byte-level rebuild/replay reproducibility are unaffected.",
+    "evidence": "revision/audit/REVISION_ALIGNMENT_20260923.md section A.3"
+  },
+  "notes": [
+    "Energy values are ESTIMATES (datasheet typical current x measured time), not measurements.",
+    "Datasheet currents: STM32F103xC/D/E DocID 14611 run-mode typical (peripherals off/on).",
+    "MCU clock 72 MHz = HSE 8 MHz x 9; 48/24 MHz variants for scaling checks."
+  ],
+  "platform": {
+    "board": "STM32-Mini V3.1 (Mcudev)",
+    "mcu": "STM32F103-compatible, Cortex-M3 r1p1, no FPU",
+    "device_id": "0x414 (DBGMCU_IDCODE 0x10036414)",
+    "flash_size_kib": 256,
+    "sram_measured_kib": 64,
+    "clock_cfgr": "0x001D040A",
+    "stack_high_water_bytes": 256
+  },
+  "firmware": {
+    "elf_sha256": "EEC783AD03276249D4FCBE9C9F5B7A7496B3CCEC2C5BDE2F281E51E8340FC31F",
+    "bin_sha256": "0930234D6C4C400AA25C70DBF4ED18CFCAEE39B44C2ED3DB7D015C47589F515F",
+    "text_bytes": 169608,
+    "data_bytes": 4116,
+    "bss_bytes": 3220,
+    "win_data_sha256": "9A5B995BEBCDD652706AF82A8FFAAB7EAA04D72EA0735EB9C3D84FAAE5529A65"
+  },
+  "canonical_run": "f72w13_r1 (banded K*W, W=13, 72 MHz)",
+  "runs": [
+    {
+      "tag": "f24w13",
+      "clk_hz": 24000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 3324010.7,
+        "p95_cycles": 3360536,
+        "max_cycles": 3367328,
+        "mean_ms": 138.5004
+      },
+      "banded": {
+        "mean_cycles": 290919.3,
+        "p95_cycles": 292503,
+        "max_cycles": 295652,
+        "mean_ms": 12.1216
+      },
+      "ratio_dense_over_banded": 11.43,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "5CAD1E7439F25932F35B4FE742B02C5925695D623974032A382FC120F69C12F0",
+      "clk_mhz": 24,
+      "band_w": 13,
+      "energy_estimate": {
+        "t_banded_s": 0.012122,
+        "e_lo_mj": 0.48,
+        "e_hi_mj": 0.68,
+        "p_avg_lo_mw_at_2s": 0.24,
+        "p_avg_hi_mw": 0.34
+      }
+    },
+    {
+      "tag": "f48w13",
+      "clk_hz": 48000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 3825730.3,
+        "p95_cycles": 3881840,
+        "max_cycles": 3893727,
+        "mean_ms": 79.7027
+      },
+      "banded": {
+        "mean_cycles": 336174.1,
+        "p95_cycles": 338274,
+        "max_cycles": 343649,
+        "mean_ms": 7.0036
+      },
+      "ratio_dense_over_banded": 11.38,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "D4A8903753FF659CDB97C326FFED105686B474C034D964B8273EB62C184B8AFE",
+      "clk_mhz": 48,
+      "band_w": 13,
+      "energy_estimate": {
+        "t_banded_s": 0.007004,
+        "e_lo_mj": 0.5547,
+        "e_hi_mj": 0.7858,
+        "p_avg_lo_mw_at_2s": 0.2773,
+        "p_avg_hi_mw": 0.3929
+      }
+    },
+    {
+      "tag": "f72w07",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733299.4,
+        "p95_cycles": 4775341,
+        "max_cycles": 4782135,
+        "mean_ms": 65.7403
+      },
+      "banded": {
+        "mean_cycles": 251932.5,
+        "p95_cycles": 253077,
+        "max_cycles": 253979,
+        "mean_ms": 3.4991
+      },
+      "ratio_dense_over_banded": 18.79,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "E991D74FE9637A16CF9851A405E02BD2E71573D9DA4CB97191706B1E818690F6",
+      "clk_mhz": 72,
+      "band_w": 7,
+      "energy_estimate": {
+        "t_banded_s": 0.003499,
+        "e_lo_mj": 0.4157,
+        "e_hi_mj": 0.5773,
+        "p_avg_lo_mw_at_2s": 0.2078,
+        "p_avg_hi_mw": 0.2887
+      }
+    },
+    {
+      "tag": "f72w13_r1",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733299.4,
+        "p95_cycles": 4775341,
+        "max_cycles": 4782135,
+        "mean_ms": 65.7403
+      },
+      "banded": {
+        "mean_cycles": 423853.8,
+        "p95_cycles": 425972,
+        "max_cycles": 428799,
+        "mean_ms": 5.8869
+      },
+      "ratio_dense_over_banded": 11.17,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "FD9DC30D1BB09F65198929D2EC0F5E6C6B04AFF1BE316783FE0A2DC8E1BD4E0A",
+      "clk_mhz": 72,
+      "band_w": 13,
+      "energy_estimate": {
+        "t_banded_s": 0.005887,
+        "e_lo_mj": 0.6994,
+        "e_hi_mj": 0.9713,
+        "p_avg_lo_mw_at_2s": 0.3497,
+        "p_avg_hi_mw": 0.4857
+      }
+    },
+    {
+      "tag": "f72w13_r2",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733299.4,
+        "p95_cycles": 4775341,
+        "max_cycles": 4782135,
+        "mean_ms": 65.7403
+      },
+      "banded": {
+        "mean_cycles": 423853.8,
+        "p95_cycles": 425972,
+        "max_cycles": 428799,
+        "mean_ms": 5.8869
+      },
+      "ratio_dense_over_banded": 11.17,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "FD9DC30D1BB09F65198929D2EC0F5E6C6B04AFF1BE316783FE0A2DC8E1BD4E0A",
+      "clk_mhz": 72,
+      "band_w": 13,
+      "energy_estimate": {
+        "t_banded_s": 0.005887,
+        "e_lo_mj": 0.6994,
+        "e_hi_mj": 0.9713,
+        "p_avg_lo_mw_at_2s": 0.3497,
+        "p_avg_hi_mw": 0.4857
+      }
+    },
+    {
+      "tag": "f72w13_r3",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733299.4,
+        "p95_cycles": 4775341,
+        "max_cycles": 4782135,
+        "mean_ms": 65.7403
+      },
+      "banded": {
+        "mean_cycles": 423853.8,
+        "p95_cycles": 425972,
+        "max_cycles": 428799,
+        "mean_ms": 5.8869
+      },
+      "ratio_dense_over_banded": 11.17,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "FD9DC30D1BB09F65198929D2EC0F5E6C6B04AFF1BE316783FE0A2DC8E1BD4E0A",
+      "clk_mhz": 72,
+      "band_w": 13,
+      "energy_estimate": {
+        "t_banded_s": 0.005887,
+        "e_lo_mj": 0.6994,
+        "e_hi_mj": 0.9713,
+        "p_avg_lo_mw_at_2s": 0.3497,
+        "p_avg_hi_mw": 0.4857
+      }
+    },
+    {
+      "tag": "f72w25",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733299.4,
+        "p95_cycles": 4775341,
+        "max_cycles": 4782135,
+        "mean_ms": 65.7403
+      },
+      "banded": {
+        "mean_cycles": 757916.4,
+        "p95_cycles": 763308,
+        "max_cycles": 768335,
+        "mean_ms": 10.5266
+      },
+      "ratio_dense_over_banded": 6.25,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "F6FB30136F7B2BE47EDEB0A1F1DD25430A9A877A65B9C2C35C08E0697E011749",
+      "clk_mhz": 72,
+      "band_w": 25,
+      "energy_estimate": {
+        "t_banded_s": 0.010527,
+        "e_lo_mj": 1.2506,
+        "e_hi_mj": 1.7369,
+        "p_avg_lo_mw_at_2s": 0.6253,
+        "p_avg_hi_mw": 0.8684
+      }
+    }
+  ],
+  "cross_records": [
+    {
+      "tag": "s2",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733843.4,
+        "p95_cycles": 4768495,
+        "max_cycles": 4769029,
+        "mean_ms": 65.7478
+      },
+      "banded": {
+        "mean_cycles": 425351.0,
+        "p95_cycles": 427601,
+        "max_cycles": 427871,
+        "mean_ms": 5.9077
+      },
+      "ratio_dense_over_banded": 11.13,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "694299E86CAE2CD375F419409A684EA01759A9408433BF7E4C1470C7F446658F"
+    },
+    {
+      "tag": "s3",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733962.0,
+        "p95_cycles": 4769170,
+        "max_cycles": 4774715,
+        "mean_ms": 65.7495
+      },
+      "banded": {
+        "mean_cycles": 424814.8,
+        "p95_cycles": 427425,
+        "max_cycles": 429547,
+        "mean_ms": 5.9002
+      },
+      "ratio_dense_over_banded": 11.14,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "8DA014FC3926C445CB56F7D23EC53AC74F52307B2CCDD5C9E594A471E6438681"
+    },
+    {
+      "tag": "ws1",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733644.6,
+        "p95_cycles": 4769657,
+        "max_cycles": 4773171,
+        "mean_ms": 65.7451
+      },
+      "banded": {
+        "mean_cycles": 425079.7,
+        "p95_cycles": 427311,
+        "max_cycles": 427546,
+        "mean_ms": 5.9039
+      },
+      "ratio_dense_over_banded": 11.14,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "BB81D4CD51B10256DA87C0078EE5411AD347A7D5A1684DB4A86744F857EFEAE7"
+    },
+    {
+      "tag": "ws2",
+      "clk_hz": 72000000,
+      "magic": "0x3142FFFF",
+      "stack_used_bytes": 256,
+      "n_win": 256,
+      "dense": {
+        "mean_cycles": 4733924.9,
+        "p95_cycles": 4772057,
+        "max_cycles": 4774507,
+        "mean_ms": 65.749
+      },
+      "banded": {
+        "mean_cycles": 425011.2,
+        "p95_cycles": 427360,
+        "max_cycles": 427483,
+        "mean_ms": 5.9029
+      },
+      "ratio_dense_over_banded": 11.14,
+      "est_match_dense": "254/254",
+      "est_match_banded": "254/254",
+      "blob_sha256": "540FF6A11249EC348B4B9CF6DBBAD873CD160FB1D73A595567ECDC6532E71FEE"
+    }
+  ],
+  "reproducibility": {
+    "rebuild_byte_identical": true,
+    "replay_byte_identical": true,
+    "replay_sha256": "FD9DC30D1BB09F65198929D2EC0F5E6C6B04AFF1BE316783FE0A2DC8E1BD4E0A",
+    "canonical_sha256": "FD9DC30D1BB09F65198929D2EC0F5E6C6B04AFF1BE316783FE0A2DC8E1BD4E0A"
+  }
+}

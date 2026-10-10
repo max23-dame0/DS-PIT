@@ -1,0 +1,39 @@
+[exp_table1_stats] 2026-09-17 16:04:57
+
+===== IEEE SPC =====
+record                               n     mean      min      max
+DATA_01_TYPE01_BPMtrace.mat        148   133.41    69.59   165.62
+DATA_02_TYPE02_BPMtrace.mat        148   120.97    69.52   148.59
+DATA_03_TYPE02_BPMtrace.mat        140   131.28    83.71   160.43
+DATA_04_TYPE02_BPMtrace.mat        146   133.03    78.95   164.06
+DATA_05_TYPE02_BPMtrace.mat        146   141.93   101.24   166.84
+DATA_06_TYPE02_BPMtrace.mat        150   131.50    68.73   153.06
+DATA_07_TYPE02_BPMtrace.mat        143   134.61    92.12   157.56
+DATA_08_TYPE02_BPMtrace.mat        160   125.12    74.53   150.79
+DATA_09_TYPE02_BPMtrace.mat        149   126.07    74.26   151.27
+DATA_10_TYPE02_BPMtrace.mat        149   160.51   121.36   176.74
+DATA_11_TYPE02_BPMtrace.mat        143   152.49   110.06   170.64
+DATA_12_TYPE02_BPMtrace.mat        146   141.66    96.83   170.28
+BPM_S04_T01.mat                    107    90.31    66.30   107.14
+True_S01_T01.mat                   142    74.73    59.05   101.92
+True_S02_T01.mat                   137    76.13    60.62   101.24
+True_S02_T02.mat                   144   127.69    76.92   147.67
+True_S03_T02.mat                   152   156.77   107.97   172.78
+True_S04_T02.mat                   101   122.81   101.04   147.97
+True_S05_T02.mat                   157   135.32   112.18   146.00
+True_S06_T01.mat                   132    90.61    64.66   117.19
+True_S06_T02.mat                   142   143.44   115.03   165.62
+True_S07_T02.mat                   121   127.34   112.90   146.76
+True_S08_T01.mat                   100    86.00    79.96    92.69
+
+IEEE SPC (Training, 12)     1768  mean=135.95  min= 68.73  max=176.74  p1= 73.1 p99=175.2  | <60= 0.00%  >180= 0.00%
+IEEE SPC (Test, 11)         1435  mean=113.52  min= 59.05  max=172.78  p1= 61.5 p99=169.1  | <60= 0.42%  >180= 0.00%
+IEEE SPC (all 23)           3203  mean=125.90  min= 59.05  max=176.74  p1= 63.7 p99=171.9  | <60= 0.19%  >180= 0.00%
+
+===== DALIA (15 subjects) =====
+DALIA                      64697  mean= 89.43  min= 41.69  max=187.02  p1= 49.6 p99=157.6  | <60= 5.79%  >180= 0.06%
+
+===== WESAD (15 subjects) =====
+WESAD                      22478  mean= 77.24  min= 44.94  max=154.43  p1= 50.8 p99=134.8  | <60=10.80%  >180= 0.00%
+
+[saved] results/table1_stats.mat

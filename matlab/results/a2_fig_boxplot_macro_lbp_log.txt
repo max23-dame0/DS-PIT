@@ -1,0 +1,30 @@
+=== Four-Arm Factorial Ablation: Complete Macro-Scale LBP vs. Micro-Scale SSC ===
+Generated: 2026-10-10 (from ds5.m per-subject evaluation & exp_a2_fig_boxplot.m)
+Configuration:
+  Arm 1 (Baseline):       sigma_SSC = 50, LBP disabled (state_lo_hz = 1.0, edge_taper = 0, lbp_temp_w = 0)
+  Arm 2 (Baseline + SSC): sigma_SSC = 2,  LBP disabled (state_lo_hz = 1.0, edge_taper = 0, lbp_temp_w = 0)
+  Arm 3 (Baseline + LBP): sigma_SSC = 50, LBP enabled  (state_lo_hz = 0.75, edge_taper = 30, lbp_temp_w = 1)
+  Arm 4 (DS-PIT Full):    sigma_SSC = 2,  LBP enabled  (state_lo_hz = 0.75, edge_taper = 30, lbp_temp_w = 1)
+
+--- IEEE SPC (n = 23 recordings; standard partition protocol) ---
+  Baseline       : mean =  5.56, median = 2.62, Q1 = 1.350, Q3 = 8.095, IQR = 6.745, whiskers = [0.450, 17.020], outliers = [22.910]
+  Baseline + SSC : mean =  1.96, median = 0.91, Q1 = 0.605, Q3 = 1.885, IQR = 1.280, whiskers = [0.340,  2.860], outliers = [8.060, 12.850]
+  Baseline + LBP : mean =  4.97, median = 2.39, Q1 = 1.080, Q3 = 5.240, IQR = 4.160, whiskers = [0.450,  6.110], outliers = [11.500, 11.600, 14.720, 17.020, 22.910]
+  DS-PIT (Full)  : mean =  1.50, median = 1.00, Q1 = 0.605, Q3 = 1.730, IQR = 1.125, whiskers = [0.340,  2.930], outliers = [7.680] (train 12: 0.78 +- 0.44; held-out test 11: 2.16 +- 1.87; test 10: 2.10 +- 1.96)
+
+--- PPG-DaLiA (n = 15 subjects; training-free unified configuration) ---
+  Baseline       : mean = 11.01 +- 4.70, median = 9.349, Q1 = 7.880, Q3 = 13.342, IQR = 5.462, whiskers = [6.565, 16.094], outliers = [24.326]
+  Baseline + SSC : mean =  8.69 +- 3.29, median = 7.974, Q1 = 6.786, Q3 =  9.965, IQR = 3.179, whiskers = [2.907, 13.672], outliers = [15.688]
+  Baseline + LBP : mean =  8.22 +- 4.71, median = 6.333, Q1 = 5.198, Q3 = 10.008, IQR = 4.810, whiskers = [3.119, 12.838], outliers = [21.583]
+  DS-PIT (Full)  : mean =  5.83 +- 2.18, median = 5.225, Q1 = 4.296, Q3 =  6.908, IQR = 2.612, whiskers = [2.916, 10.443], outliers = []
+  Contrast (Full vs. +SSC): delta = -2.8617 BPM, exact two-sided sign-flip p = 0.00012207, improved = 14/15 subjects
+  Contrast (Full vs. +LBP): delta = -2.3886 BPM, exact two-sided sign-flip p = 0.00427246, improved = 13/15 subjects
+  Isolated dynamic temperature tau_t (Full vs. +SSC with frozen [0.75, 3.0] Hz + 30-BPM taper): 5.9613 -> 5.8302 BPM (delta = -0.1311 BPM, exact sign-flip p = 0.00689697, Holm p = 0.04827881, Monte Carlo p = 0.0065, 13/15 subjects)
+
+--- WESAD (n = 15 subjects; training-free unified configuration) ---
+  Baseline       : mean =  8.28 +- 4.05, median = 7.314, Q1 = 5.074, Q3 =  9.623, IQR = 4.549, whiskers = [3.860, 15.196], outliers = [17.308]
+  Baseline + SSC : mean =  7.83 +- 4.33, median = 6.942, Q1 = 4.487, Q3 =  9.617, IQR = 5.130, whiskers = [3.826, 17.178], outliers = []
+  Baseline + LBP : mean =  6.54 +- 2.83, median = 6.217, Q1 = 4.200, Q3 =  7.941, IQR = 3.741, whiskers = [3.035, 13.011], outliers = []
+  DS-PIT (Full)  : mean =  5.76 +- 3.24, median = 4.965, Q1 = 3.307, Q3 =  7.572, IQR = 4.265, whiskers = [2.236,  8.091], outliers = [15.124]
+  Contrast (Full vs. +SSC): delta = -2.0757 BPM, exact two-sided sign-flip p = 0.00006104, improved = 15/15 subjects
+  Contrast (Full vs. +LBP): delta = -0.7819 BPM, exact two-sided sign-flip p = 0.02557373, improved = 11/15 subjects

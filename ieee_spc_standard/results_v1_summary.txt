@@ -1,0 +1,18 @@
+V1REPRO_SUMMARY kernel= train=0.8744 test=2.1833 all=1.5004 sd=2.2662
+V1REPRO_SUMMARY kernel=analytic train=0.9365 test=7.4531 all=4.0532 sd=3.3111
+V1REPRO_SUMMARY kernel=analytic_max train=0.9317 test=7.4531 all=4.0506 sd=3.3098
+V1REPRO_SUMMARY kernel=analytic_norm train=0.9317 test=7.5030 all=4.0745 sd=3.3102
+V1REPRO_SUMMARY kernel=analytic_v2 train=0.8838 test=7.4390 all=4.0189 sd=3.1729
+V1REPRO_SUMMARY kernel=analytic train=0.9526 test=8.9369 all=4.7712 sd=4.6059
+V1REPRO_SUMMARY kernel= train=0.8744 test=2.1833 all=1.5004 sd=2.2662
+V1REPRO_SUMMARY kernel=analytic train=0.9365 test=7.4531 all=4.0532 sd=3.3111
+V1REPRO_SUMMARY kernel=ksrc ksrc= train=0.9315 test=7.4531 all=4.0505 sd=3.3099
+V1REPRO_SUMMARY kernel=ksrc ksrc=train train=0.9315 test=7.4531 all=4.0505 sd=3.3099
+V1REPRO_SUMMARY kernel=analytic ksrc= train=0.9365 test=7.4531 all=4.0532 sd=3.3111
+V1REPRO_SUMMARY kernel=analytic ksrc=train train=0.9526 test=8.9369 all=4.7712 sd=4.6059
+V1REPRO_SUMMARY kernel= ksrc= train=0.8744 test=2.1833 all=1.5004 sd=2.2662
+V1REPRO_SUMMARY kernel=analytic_norm ksrc= train=0.9317 test=7.5030 all=4.0745 sd=3.3102
+V1REPRO_SUMMARY kernel= ksrc= train=0.8744 test=2.1833 all=1.5004 sd=2.2662
+V1REPRO_SUMMARY kernel= ksrc=train train=0.8057 test=2.1637 all=1.4552 sd=2.0969
+V1REPRO_SUMMARY kernel= ksrc=train train=0.8057 test=2.1637 all=1.4552 sd=2.0969
+V1REPRO_SUMMARY kernel= ksrc=trainall train=0.7756 test=2.1637 all=1.4395 sd=2.0603

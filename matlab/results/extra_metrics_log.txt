@@ -1,0 +1,18 @@
+=== R3-C14 extra metrics (fixed sigma=2, D=3) ===
+dalia  n=15  pooledRMSE=11.9092  >5%=28.60%  >10%=15.55% (check)  subjRMSE=11.3711
+wesad  n=15  pooledRMSE=11.2645  >5%=31.03%  >10%=15.17% (check)  subjRMSE=9.9010
+ieee   n=23  pooledRMSE=16.9553  >5%=21.98%  >10%=12.35% (check)  subjRMSE=10.3085
+
+[saved] results/extra_metrics.mat
+=== R3-C14 extra metrics (fixed sigma=2, D=3) ===
+dalia  n=15
+  subject-macro : RMSE=11.3711  >5%=28.80%  >10%=15.70%  Med=2.4518  P95=26.82
+  pooled        : RMSE=11.9092  >5%=28.60%  >10%=15.55%  Med=2.1441  P95=24.83
+wesad  n=15
+  subject-macro : RMSE=9.9010  >5%=31.02%  >10%=15.17%  Med=2.4686  P95=22.32
+  pooled        : RMSE=11.2645  >5%=31.03%  >10%=15.17%  Med=2.1831  P95=23.62
+ieee   n=23
+  subject-macro : RMSE=10.3085  >5%=21.98%  >10%=12.19%  Med=4.4580  P95=21.29
+  pooled        : RMSE=16.9553  >5%=21.98%  >10%=12.35%  Med=2.3911  P95=40.57
+
+[saved] results/extra_metrics.mat

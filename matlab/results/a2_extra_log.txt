@@ -1,0 +1,30 @@
+=== IEEE under A' ===
+wideband+taper MAE=6.7659 | narrow(1.0Hz)+taper MAE=7.6985 | delta=-0.9326
+pooled: Med=2.374 P95=40.569 >5%=21.47% >10%=12.35% RMSE=16.934
+record-macro: RMSE=10.279 >5%=21.41%
+top records by abs error: [10 17 14] (share 54.0%)
+
+=== ACC paired p (A') ===
+DALIA: x only delta=+0.214 p=0.3880 | y only delta=+0.641 p=0.0007 | z only delta=+0.636 p=0.0574 | pc1 delta=+0.197 p=0.0467 | 
+WESAD: x only delta=+0.703 p=0.0124 | y only delta=+0.261 p=0.2434 | z only delta=+0.212 p=0.5727 | pc1 delta=+0.344 p=0.0856 | 
+
+=== activity strata (A') ===
+--- DALIA (headline 5.830) ---
+  Sitting      n=  4586 share=  7.1% MAE=  4.239 >10%=  8.7% contrib=  5.2%
+  Stairs       n=  3260 share=  5.0% MAE= 16.493 >10%= 43.8% contrib= 14.5%
+  TableSoccer  n=  2327 share=  3.6% MAE= 12.860 >10%= 41.2% contrib=  8.0%
+  Cycling      n=  3495 share=  5.4% MAE=  7.834 >10%= 19.9% contrib=  7.4%
+  Driving      n=  6857 share= 10.6% MAE=  3.741 >10%=  9.0% contrib=  6.9%
+  Lunch        n= 13567 share= 21.0% MAE=  3.804 >10%=  9.0% contrib= 13.9%
+  Walking      n=  4701 share=  7.3% MAE=  7.431 >10%= 17.2% contrib=  9.4%
+  Working      n=  8515 share= 13.2% MAE=  2.964 >10%=  5.5% contrib=  6.8%
+  Transition   n= 17344 share= 26.8% MAE=  5.995 >10%= 18.8% contrib= 28.0%
+  ALL          n= 64652 MAE=  5.753 >10%= 15.3%
+--- WESAD (headline 5.757) ---
+  Baseline     n=  8804 share= 39.2% MAE=  3.070 >10%=  6.0% contrib= 20.9%
+  Stress       n=  4981 share= 22.2% MAE= 13.849 >10%= 42.6% contrib= 53.3%
+  Amusement    n=  2788 share= 12.4% MAE=  3.304 >10%=  7.2% contrib=  7.1%
+  Meditation   n=  5905 share= 26.3% MAE=  4.119 >10%=  9.2% contrib= 18.8%
+  ALL          n= 22478 MAE=  5.763 >10%= 15.1%
+
+[saved] results/a2_extra.mat

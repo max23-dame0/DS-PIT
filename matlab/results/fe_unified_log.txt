@@ -1,0 +1,22 @@
+
+######## DALIA ########
+  Full (WF1 + WF2)         MAE=5.9584  SD=2.1640
+  - second Wiener stage    MAE=21.7074  SD=13.2832
+  - first Wiener stage     MAE=6.2041  SD=2.3793
+  - both Wiener stages     MAE=7.1054  SD=2.5350
+  [paired] ablations vs full (delta = full - ablation; positive = stage helps)
+  - second Wiener stage    -15.7490  p=0.0001
+  - first Wiener stage      -0.2458  p=0.5280
+  - both Wiener stages      -1.1471  p=0.0745
+
+######## WESAD ########
+  Full (WF1 + WF2)         MAE=5.7836  SD=3.2152
+  - second Wiener stage    MAE=22.7485  SD=7.7550
+  - first Wiener stage     MAE=5.9575  SD=4.0452
+  - both Wiener stages     MAE=6.4883  SD=6.0304
+  [paired] ablations vs full (delta = full - ablation; positive = stage helps)
+  - second Wiener stage    -16.9649  p=0.0001
+  - first Wiener stage      -0.1739  p=0.9938
+  - both Wiener stages      -0.7047  p=0.9929
+
+[saved] results/fe_unified.mat

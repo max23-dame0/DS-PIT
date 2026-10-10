@@ -1,0 +1,26 @@
+
+######## DALIA ########
+  sanity: max |recomputed - ds5| per-subject MAE = 0.00e+00
+  pooled n=64652 windows
+  Pearson(|err|, motion)  = 0.244   [motion = mean acc RMS]
+  Pearson(|err|, quality) = 0.162   [quality = acc RMS / PPG RMS]
+  Spearman(|err|, motion) = 0.199
+  --- motion quartiles: mean |err| / bias / >10% ---
+  Q1  n= 16163  median_motion=0.0060  MAE=3.08  >10%=5.5%
+  Q2  n= 16163  median_motion=0.0615  MAE=4.45  >10%=11.7%
+  Q3  n= 16163  median_motion=0.1325  MAE=6.74  >10%=18.2%
+  Q4  n= 16163  median_motion=0.2149  MAE=9.29  >10%=26.8%
+
+######## WESAD ########
+  sanity: max |recomputed - ds5| per-subject MAE = 0.00e+00
+  pooled n=22478 windows
+  Pearson(|err|, motion)  = 0.333   [motion = mean acc RMS]
+  Pearson(|err|, quality) = 0.352   [quality = acc RMS / PPG RMS]
+  Spearman(|err|, motion) = 0.302
+  --- motion quartiles: mean |err| / bias / >10% ---
+  Q1  n=  5619  median_motion=0.1031  MAE=2.91  >10%=4.3%
+  Q2  n=  5620  median_motion=0.1968  MAE=3.65  >10%=8.5%
+  Q3  n=  5619  median_motion=0.6415  MAE=6.82  >10%=19.3%
+  Q4  n=  5620  median_motion=4.8318  MAE=9.78  >10%=28.6%
+
+[saved] results/motion_covariate.mat

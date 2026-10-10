@@ -1,0 +1,26 @@
+
+######## DALIA ########
+  sum (evaluated)            MAE=5.9584  SD=2.1640
+  x only                     MAE=6.2280  SD=2.1250
+  y only                     MAE=6.5655  SD=2.6179
+  z only                     MAE=6.5986  SD=2.3078
+  first principal component  MAE=6.1267  SD=2.0306
+  [paired vs sum]  delta(alt - sum)
+  x only                      +0.2696  p=0.2593
+  y only                      +0.6072  p=0.0031
+  z only                      +0.6403  p=0.0521
+  first principal component   +0.1683  p=0.0923
+
+######## WESAD ########
+  sum (evaluated)            MAE=5.7836  SD=3.2152
+  x only                     MAE=6.5555  SD=3.1419
+  y only                     MAE=6.0081  SD=3.0530
+  z only                     MAE=6.0037  SD=3.1881
+  first principal component  MAE=6.1097  SD=2.9499
+  [paired vs sum]  delta(alt - sum)
+  x only                      +0.7719  p=0.0073
+  y only                      +0.2245  p=0.2981
+  z only                      +0.2201  p=0.5247
+  first principal component   +0.3261  p=0.1050
+
+[saved] results/acc_mae.mat

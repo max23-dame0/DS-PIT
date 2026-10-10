@@ -1,0 +1,42 @@
+
+######## DALIA ########
+[run] off (paper)              MAE=5.9584  SD=2.1640  delta(vs off)=+0.0000
+[run] C1: adapt-temp (W=30)    MAE=5.8302  SD=2.1847  delta(vs off)=-0.1282
+[run] C2: adapt-temp (W=15)    MAE=5.8255  SD=2.1753  delta(vs off)=-0.1329
+  指标均值（受试者平均）：
+    global MAE                          off=5.958  C1=5.830  C2=5.825
+    regime A: 90-150 BPM                off=9.090  C1=8.967  C2=8.974
+    regime B: motion Q4                 off=8.929  C1=8.765  C2=8.727
+    regime C: recovery (1..5 after Q4)  off=8.556  C1=8.403  C2=8.379
+  [paired vs off]  delta   raw p   Holm p   CI95
+    C1   global MAE                         -0.1282  0.0065  0.0520  [-0.257, -0.038]
+    C2   global MAE                         -0.1329  0.0138  0.0966  [-0.274, -0.033]
+    C2   regime B: motion Q4                -0.2021  0.0141  0.0966  [-0.409, -0.049]
+    C1   regime A: 90-150 BPM               -0.1235  0.0209  0.1045  [-0.237, -0.032]
+    C1   regime B: motion Q4                -0.1644  0.0210  0.1045  [-0.356, -0.031]
+    C1   regime C: recovery (1..5 after Q4) -0.1530  0.0293  0.1045  [-0.352, -0.021]
+    C2   regime C: recovery (1..5 after Q4) -0.1774  0.0481  0.1045  [-0.405, -0.023]
+    C2   regime A: 90-150 BPM               -0.1164  0.1337  0.1337  [-0.261, +0.007]
+  判级：不成立（无显著改善，且未显著劣化）
+
+######## WESAD ########
+[run] off (paper)              MAE=5.7836  SD=3.2152  delta(vs off)=+0.0000
+[run] C1: adapt-temp (W=30)    MAE=5.7569  SD=3.2355  delta(vs off)=-0.0267
+[run] C2: adapt-temp (W=15)    MAE=5.7540  SD=3.2305  delta(vs off)=-0.0295
+  指标均值（受试者平均）：
+    global MAE                          off=5.784  C1=5.757  C2=5.754
+    regime A: 90-150 BPM                off=16.525  C1=16.365  C2=16.385
+    regime B: motion Q4                 off=9.119  C1=9.078  C2=9.084
+    regime C: recovery (1..5 after Q4)  off=8.245  C1=8.219  C2=8.232
+  [paired vs off]  delta   raw p   Holm p   CI95
+    C1   regime A: 90-150 BPM               -0.1596  0.0026  0.0208  [-0.302, -0.047]
+    C2   regime A: 90-150 BPM               -0.1400  0.0146  0.1022  [-0.270, -0.041]
+    C1   regime B: motion Q4                -0.0401  0.1559  0.9353  [-0.090, +0.009]
+    C1   global MAE                         -0.0267  0.1757  0.9353  [-0.057, +0.013]
+    C2   global MAE                         -0.0295  0.2191  0.9353  [-0.064, +0.019]
+    C2   regime B: motion Q4                -0.0347  0.2446  0.9353  [-0.087, +0.016]
+    C1   regime C: recovery (1..5 after Q4) -0.0265  0.6117  1.0000  [-0.086, +0.061]
+    C2   regime C: recovery (1..5 after Q4) -0.0131  0.8985  1.0000  [-0.081, +0.092]
+  判级：弱成立（预定义 regime 内显著改善）；实践显著性：**无**（显著项 |Δ| 均 < 0.3 BPM）
+
+[saved] results/lbp_temp_t3.mat

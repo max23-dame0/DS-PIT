@@ -1,0 +1,90 @@
+
+######## DALIA ########
+[1] sigma ablation + paired (base MAE=5.8302)
+    fixed 3          MAE=5.8979
+    fixed 4          MAE=6.0114
+    fixed 5          MAE=6.0580
+    adaptive [2,5]   MAE=5.8437
+    D=15             MAE=5.2931
+    fixed 3          delta=-0.0677  raw p=0.9697  Holm=1.0000
+    fixed 4          delta=-0.1813  raw p=0.9807  Holm=1.0000
+    fixed 5          delta=-0.2279  raw p=0.9919  Holm=1.0000
+    adaptive [2,5]   delta=-0.0135  raw p=0.9602  Holm=1.0000
+    D=15             delta=+0.5371  raw p=0.0001  Holm=0.0005
+[2] latency sweep
+    D= 1 wait= 0s MAE=6.3358
+    D= 2 wait= 2s MAE=6.0251
+    D= 3 wait= 4s MAE=5.8302
+    D= 4 wait= 6s MAE=5.7141
+    D= 6 wait=10s MAE=5.5768
+    D=10 wait=18s MAE=5.4060
+    D=15 wait=28s MAE=5.2931
+[3] front-end ablation
+    Full (WF1+WF2)       MAE=5.8302
+    - second Wiener      MAE=31.8201
+    - first Wiener       MAE=6.1069
+    - both               MAE=7.1480
+    full - - second Wiener delta=-25.9899  p=0.0002
+    full - - first Wiener delta=-0.2767  p=0.4790
+    full - - both         delta=-1.3179  p=0.0533
+[4] acc reference
+    sum (evaluated)    MAE=5.8302  delta=+0.0000
+    x only             MAE=6.0442  delta=+0.2141
+    y only             MAE=6.4713  delta=+0.6412
+    z only             MAE=6.4657  delta=+0.6355
+    pc1                MAE=6.0271  delta=+0.1969
+[5] bias mechanism 2x2
+    taper on, filter on    MAE=5.8302  bias=-2.1668  RMSE=11.5887
+    taper off, filter on   MAE=11.4697  bias=-9.3391  RMSE=23.2449
+    taper on, filter off   MAE=5.8376  bias=-2.1696  RMSE=11.6118
+    taper off, filter off  MAE=11.4734  bias=-9.3453  RMSE=23.2556
+[6] gate re-test under A' base
+    soft N15           MAE=7.5250  delta=+1.6948
+    hard keep N15      MAE=7.0142  delta=+1.1840
+    hard append N15    MAE=7.0728  delta=+1.2426
+
+######## WESAD ########
+[1] sigma ablation + paired (base MAE=5.7569)
+    fixed 3          MAE=5.7395
+    fixed 4          MAE=5.8435
+    fixed 5          MAE=5.9171
+    adaptive [2,5]   MAE=5.8978
+    D=15             MAE=5.4434
+    fixed 3          delta=+0.0174  raw p=0.8363  Holm=1.0000
+    fixed 4          delta=-0.0866  raw p=0.7093  Holm=1.0000
+    fixed 5          delta=-0.1603  raw p=0.4806  Holm=1.0000
+    adaptive [2,5]   delta=-0.1409  raw p=0.2701  Holm=1.0000
+    D=15             delta=+0.3135  raw p=0.0037  Holm=0.0185
+[2] latency sweep
+    D= 1 wait= 0s MAE=6.1582
+    D= 2 wait= 2s MAE=5.8969
+    D= 3 wait= 4s MAE=5.7569
+    D= 4 wait= 6s MAE=5.6903
+    D= 6 wait=10s MAE=5.6162
+    D=10 wait=18s MAE=5.5138
+    D=15 wait=28s MAE=5.4434
+[3] front-end ablation
+    Full (WF1+WF2)       MAE=5.7569
+    - second Wiener      MAE=27.3847
+    - first Wiener       MAE=5.9566
+    - both               MAE=6.5377
+    full - - second Wiener delta=-21.6278  p=0.0001
+    full - - first Wiener delta=-0.1998  p=0.9891
+    full - - both         delta=-0.7809  p=0.9910
+[4] acc reference
+    sum (evaluated)    MAE=5.7569  delta=+0.0000
+    x only             MAE=6.4598  delta=+0.7029
+    y only             MAE=6.0180  delta=+0.2611
+    z only             MAE=5.9684  delta=+0.2115
+    pc1                MAE=6.1011  delta=+0.3442
+[5] bias mechanism 2x2
+    taper on, filter on    MAE=5.7569  bias=-2.1725  RMSE=11.2607
+    taper off, filter on   MAE=9.1401  bias=-7.5366  RMSE=18.8237
+    taper on, filter off   MAE=5.7629  bias=-2.1708  RMSE=11.2857
+    taper off, filter off  MAE=9.1372  bias=-7.5303  RMSE=18.8203
+[6] gate re-test under A' base
+    soft N15           MAE=7.2824  delta=+1.5255
+    hard keep N15      MAE=6.5288  delta=+0.7719
+    hard append N15    MAE=6.5691  delta=+0.8122
+
+[saved] results/a2_tables.mat

@@ -1,0 +1,12 @@
+数据集DATA_10_TYPE02：AAE=1.55 BPM，sdAE=2.43 BPM，AAEP=1.02%
+
+==================== 整体结果统计 ====================
+训练集（1-12）：AAE=0.13(0.20) BPM，AAEP=0.08%
+测试集（13-23）：AAE=0.00(0.00) BPM，AAEP=0.00%
+全数据集：平均AAE=0.07(0.11) BPM，AAEP=0.04%
+运行时间为 2.294801 s
+{Unrecognized function or variable 'BlandAltman'.
+
+Error in WFPV_OVD_PISC (line 527)
+BlandAltman(fullBPM0', fullBPM', {'Ground Truth HR (BPM)', 'Estimated HR (BPM)'});
+} 

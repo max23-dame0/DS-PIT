@@ -1,0 +1,6 @@
+=== EMB-01 export start 21-Sep-2026 18:53:29 ===
+[headline] dalia mean = 5.9584 (expect 5.9584)
+[headline] wesad mean = 5.7836 (expect 5.7836)
+[export] K=161 nWin=4603  est(NaN)=2
+[export] bin=2894.9 KB, ref_est=4603 lines
+=== EMB-01 export done ===

@@ -1,0 +1,57 @@
+family,dataset,variant,temperature,metric,delta_bpm,p_raw,p_holm,ci_low,ci_high,source,line
+T3,DaLiA,C1,"[0.7,1.3];W30",global MAE,-0.1282,0.0065,0.0520,-0.257,-0.038,method_dev/results/lbp_temp_t3_log.txt,12
+T3,DaLiA,C2,"[0.7,1.3];W15",global MAE,-0.1329,0.0138,0.0966,-0.274,-0.033,method_dev/results/lbp_temp_t3_log.txt,13
+T3,DaLiA,C2,"[0.7,1.3];W15",regime B: motion Q4,-0.2021,0.0141,0.0966,-0.409,-0.049,method_dev/results/lbp_temp_t3_log.txt,14
+T3,DaLiA,C1,"[0.7,1.3];W30",regime A: 90-150 BPM,-0.1235,0.0209,0.1045,-0.237,-0.032,method_dev/results/lbp_temp_t3_log.txt,15
+T3,DaLiA,C1,"[0.7,1.3];W30",regime B: motion Q4,-0.1644,0.0210,0.1045,-0.356,-0.031,method_dev/results/lbp_temp_t3_log.txt,16
+T3,DaLiA,C1,"[0.7,1.3];W30",regime C: recovery (1..5 after Q4),-0.1530,0.0293,0.1045,-0.352,-0.021,method_dev/results/lbp_temp_t3_log.txt,17
+T3,DaLiA,C2,"[0.7,1.3];W15",regime C: recovery (1..5 after Q4),-0.1774,0.0481,0.1045,-0.405,-0.023,method_dev/results/lbp_temp_t3_log.txt,18
+T3,DaLiA,C2,"[0.7,1.3];W15",regime A: 90-150 BPM,-0.1164,0.1337,0.1337,-0.261,+0.007,method_dev/results/lbp_temp_t3_log.txt,19
+T3,WESAD,C1,"[0.7,1.3];W30",regime A: 90-150 BPM,-0.1596,0.0026,0.0208,-0.302,-0.047,method_dev/results/lbp_temp_t3_log.txt,32
+T3,WESAD,C2,"[0.7,1.3];W15",regime A: 90-150 BPM,-0.1400,0.0146,0.1022,-0.270,-0.041,method_dev/results/lbp_temp_t3_log.txt,33
+T3,WESAD,C1,"[0.7,1.3];W30",regime B: motion Q4,-0.0401,0.1559,0.9353,-0.090,+0.009,method_dev/results/lbp_temp_t3_log.txt,34
+T3,WESAD,C1,"[0.7,1.3];W30",global MAE,-0.0267,0.1757,0.9353,-0.057,+0.013,method_dev/results/lbp_temp_t3_log.txt,35
+T3,WESAD,C2,"[0.7,1.3];W15",global MAE,-0.0295,0.2191,0.9353,-0.064,+0.019,method_dev/results/lbp_temp_t3_log.txt,36
+T3,WESAD,C2,"[0.7,1.3];W15",regime B: motion Q4,-0.0347,0.2446,0.9353,-0.087,+0.016,method_dev/results/lbp_temp_t3_log.txt,37
+T3,WESAD,C1,"[0.7,1.3];W30",regime C: recovery (1..5 after Q4),-0.0265,0.6117,1.0000,-0.086,+0.061,method_dev/results/lbp_temp_t3_log.txt,38
+T3,WESAD,C2,"[0.7,1.3];W15",regime C: recovery (1..5 after Q4),-0.0131,0.8985,1.0000,-0.081,+0.092,method_dev/results/lbp_temp_t3_log.txt,39
+Dose,DaLiA,C4,"[0.6,1.4];W30",global MAE,-0.1514,0.0125,0.1000,-0.303,-0.040,method_dev/results/lbp_temp_dose_log.txt,12
+Dose,DaLiA,C3,"[0.5,1.5];W30",global MAE,-0.1697,0.0231,0.1617,-0.344,-0.035,method_dev/results/lbp_temp_dose_log.txt,13
+Dose,DaLiA,C4,"[0.6,1.4];W30",regime A: 90-150 BPM,-0.1609,0.0241,0.1617,-0.309,-0.038,method_dev/results/lbp_temp_dose_log.txt,14
+Dose,DaLiA,C4,"[0.6,1.4];W30",regime B: motion Q4,-0.2068,0.0392,0.1960,-0.443,-0.029,method_dev/results/lbp_temp_dose_log.txt,15
+Dose,DaLiA,C4,"[0.6,1.4];W30",regime C: recovery (1..5 after Q4),-0.1933,0.0675,0.2700,-0.451,-0.018,method_dev/results/lbp_temp_dose_log.txt,16
+Dose,DaLiA,C3,"[0.5,1.5];W30",regime A: 90-150 BPM,-0.1744,0.0813,0.2700,-0.353,-0.008,method_dev/results/lbp_temp_dose_log.txt,17
+Dose,DaLiA,C3,"[0.5,1.5];W30",regime B: motion Q4,-0.2373,0.1013,0.2700,-0.530,-0.007,method_dev/results/lbp_temp_dose_log.txt,18
+Dose,DaLiA,C3,"[0.5,1.5];W30",regime C: recovery (1..5 after Q4),-0.2204,0.1040,0.2700,-0.505,-0.005,method_dev/results/lbp_temp_dose_log.txt,19
+Dose,WESAD,C4,"[0.6,1.4];W30",regime A: 90-150 BPM,-0.1805,0.0076,0.0608,-0.327,-0.063,method_dev/results/lbp_temp_dose_log.txt,32
+Dose,WESAD,C3,"[0.5,1.5];W30",regime A: 90-150 BPM,-0.2047,0.0312,0.2184,-0.386,-0.049,method_dev/results/lbp_temp_dose_log.txt,33
+Dose,WESAD,C4,"[0.6,1.4];W30",global MAE,-0.0338,0.1347,0.8081,-0.067,+0.011,method_dev/results/lbp_temp_dose_log.txt,34
+Dose,WESAD,C4,"[0.6,1.4];W30",regime B: motion Q4,-0.0330,0.2701,1.0000,-0.083,+0.023,method_dev/results/lbp_temp_dose_log.txt,35
+Dose,WESAD,C3,"[0.5,1.5];W30",global MAE,-0.0277,0.3838,1.0000,-0.074,+0.034,method_dev/results/lbp_temp_dose_log.txt,36
+Dose,WESAD,C3,"[0.5,1.5];W30",regime B: motion Q4,-0.0193,0.6174,1.0000,-0.085,+0.051,method_dev/results/lbp_temp_dose_log.txt,37
+Dose,WESAD,C4,"[0.6,1.4];W30",regime C: recovery (1..5 after Q4),-0.0195,0.7764,1.0000,-0.081,+0.073,method_dev/results/lbp_temp_dose_log.txt,38
+Dose,WESAD,C3,"[0.5,1.5];W30",regime C: recovery (1..5 after Q4),-0.0050,0.9575,1.0000,-0.082,+0.106,method_dev/results/lbp_temp_dose_log.txt,39
+Control,DaLiA,C7,"[0.4,1.6];W30",global MAE,-0.2001,0.0254,,,,method_dev/results/lbp_temp_ctrl_log.txt,13
+Control,DaLiA,C7,"[0.4,1.6];W30",regime A: 90-150 BPM,-0.2199,0.0622,,,,method_dev/results/lbp_temp_ctrl_log.txt,14
+Control,DaLiA,C7,"[0.4,1.6];W30",regime B: motion Q4,-0.3050,0.1006,,,,method_dev/results/lbp_temp_ctrl_log.txt,15
+Control,DaLiA,C7,"[0.4,1.6];W30",regime C: recovery (1..5 after Q4),-0.2998,0.0738,,,,method_dev/results/lbp_temp_ctrl_log.txt,16
+Control,DaLiA,C5,constant1.15,global MAE,-0.0039,0.9487,,,,method_dev/results/lbp_temp_ctrl_log.txt,17
+Control,DaLiA,C5,constant1.15,regime A: 90-150 BPM,-0.1060,0.0463,,,,method_dev/results/lbp_temp_ctrl_log.txt,18
+Control,DaLiA,C5,constant1.15,regime B: motion Q4,+0.0227,0.8405,,,,method_dev/results/lbp_temp_ctrl_log.txt,19
+Control,DaLiA,C5,constant1.15,regime C: recovery (1..5 after Q4),+0.0314,0.7989,,,,method_dev/results/lbp_temp_ctrl_log.txt,20
+Control,DaLiA,C6,constant0.85,global MAE,-0.0318,0.5737,,,,method_dev/results/lbp_temp_ctrl_log.txt,21
+Control,DaLiA,C6,constant0.85,regime A: 90-150 BPM,+0.0838,0.1856,,,,method_dev/results/lbp_temp_ctrl_log.txt,22
+Control,DaLiA,C6,constant0.85,regime B: motion Q4,-0.0249,0.8923,,,,method_dev/results/lbp_temp_ctrl_log.txt,23
+Control,DaLiA,C6,constant0.85,regime C: recovery (1..5 after Q4),-0.0289,0.9718,,,,method_dev/results/lbp_temp_ctrl_log.txt,24
+Control,WESAD,C7,"[0.4,1.6];W30",global MAE,-0.0351,0.3815,,,,method_dev/results/lbp_temp_ctrl_log.txt,37
+Control,WESAD,C7,"[0.4,1.6];W30",regime A: 90-150 BPM,-0.2574,0.0362,,,,method_dev/results/lbp_temp_ctrl_log.txt,38
+Control,WESAD,C7,"[0.4,1.6];W30",regime B: motion Q4,-0.0189,0.6392,,,,method_dev/results/lbp_temp_ctrl_log.txt,39
+Control,WESAD,C7,"[0.4,1.6];W30",regime C: recovery (1..5 after Q4),-0.0079,0.9295,,,,method_dev/results/lbp_temp_ctrl_log.txt,40
+Control,WESAD,C5,constant1.15,global MAE,-0.0290,0.0480,,,,method_dev/results/lbp_temp_ctrl_log.txt,41
+Control,WESAD,C5,constant1.15,regime A: 90-150 BPM,-0.2083,0.0035,,,,method_dev/results/lbp_temp_ctrl_log.txt,42
+Control,WESAD,C5,constant1.15,regime B: motion Q4,-0.0272,0.4707,,,,method_dev/results/lbp_temp_ctrl_log.txt,43
+Control,WESAD,C5,constant1.15,regime C: recovery (1..5 after Q4),-0.0297,0.3916,,,,method_dev/results/lbp_temp_ctrl_log.txt,44
+Control,WESAD,C6,constant0.85,global MAE,+0.0346,0.0007,,,,method_dev/results/lbp_temp_ctrl_log.txt,45
+Control,WESAD,C6,constant0.85,regime A: 90-150 BPM,+0.1395,0.2466,,,,method_dev/results/lbp_temp_ctrl_log.txt,46
+Control,WESAD,C6,constant0.85,regime B: motion Q4,+0.0387,0.1359,,,,method_dev/results/lbp_temp_ctrl_log.txt,47
+Control,WESAD,C6,constant0.85,regime C: recovery (1..5 after Q4),+0.0251,0.2719,,,,method_dev/results/lbp_temp_ctrl_log.txt,48

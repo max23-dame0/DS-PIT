@@ -1,0 +1,16 @@
+IEEE SPC   Baseline  MAE= 7.0182  n=23
+IEEE SPC   +SSC      MAE= 6.7959  n=23
+IEEE SPC   +LBP      MAE= 7.0322  n=23
+IEEE SPC   Full      MAE= 6.7659  n=23
+PPG-DaLiA  Baseline  MAE= 8.1629  n=15
+PPG-DaLiA  +SSC      MAE= 5.9584  n=15
+PPG-DaLiA  +LBP      MAE= 8.2211  n=15
+PPG-DaLiA  Full      MAE= 5.8302  n=15
+WESAD      Baseline  MAE= 6.4715  n=15
+WESAD      +SSC      MAE= 5.7836  n=15
+WESAD      +LBP      MAE= 6.5428  n=15
+WESAD      Full      MAE= 5.7569  n=15
+[saved] D:\小论文\manuscript_JBHI_IEEEtran\revision\audit\method_dev\..\..\..\fig_boxplot_A2.pdf
+IEEE SPC: Baseline | +SSC | +LBP | Full -> [7.018 6.796 7.032 6.766]
+PPG-DaLiA: Baseline | +SSC | +LBP | Full -> [8.163 5.958 8.221 5.83]
+WESAD: Baseline | +SSC | +LBP | Full -> [6.471 5.784 6.543 5.757]

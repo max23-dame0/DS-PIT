@@ -1,0 +1,5 @@
+[saved] D:\小论文\manuscript_JBHI_IEEEtran\revision\audit\method_dev\..\..\..\fig_sens_A2.pdf
+sigma DaLiA: [5.83 5.898 6.011 6.058 5.844]
+sigma WESAD: [5.757 5.739 5.843 5.917 5.898]
+latency DaLiA: [6.336 6.025 5.83 5.714 5.577 5.406 5.293]
+latency WESAD: [6.158 5.897 5.757 5.69 5.616 5.514 5.443]

@@ -1,0 +1,23 @@
+=== EMB-01 MCU run summary ===
+blob        = fw_results.bin
+magic       = 0x3142FFFF (DONE)
+clk_hz      = 72000000
+cfgr        = 0x001D040A
+stack_used  = 256 bytes (paint floor 256 B)
+n_win       = 256
+
+--- dense K^2 ---
+cycles: min=18562  p50=4749623  mean=4733299.4  p95=4775341  max=4782135
+time  : min=0.258 ms  mean=65.740 ms  p95=66.324 ms  max=66.419 ms  (at 72 MHz)
+total : 16.830 s for 256 windows
+
+--- banded K*W (W=13) ---
+cycles: min=18562  p50=425388  mean=423853.8  p95=425972  max=428799
+time  : min=0.258 ms  mean=5.887 ms  p95=5.916 ms  max=5.956 ms  (at 72 MHz)
+total : 1.507 s for 256 windows
+
+dense/banded mean-cycle ratio = 11.17  (K/W = 161/13 = 12.38)
+
+est dense  vs MATLAB: 254/254 exact, worst |diff| = 0.000 BPM, first mismatch = None
+est banded vs MATLAB: 254/254 exact, worst |diff| = 0.000 BPM, first mismatch = None
+

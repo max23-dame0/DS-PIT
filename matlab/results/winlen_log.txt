@@ -1,0 +1,18 @@
+[exp_winlen_cmp] 2026-09-17 16:00:03
+配置：D=15, band 0.75-3.0 Hz + taper 30, adaptive sigma in [2,5], obs=ratio, wf=orig
+
+######## dalia ########
+win    cachedir         MAE       SD    MedAE      P95
+4s     cache_w40      5.691    2.186    2.663   25.489
+6s     cache_w60      5.382    2.166    2.227   25.252
+8s     cache2         5.537    2.253    2.231   25.999
+最优窗长 = 6s (5.382)；8 s = 5.537，距最优 0.155 BPM
+
+######## wesad ########
+win    cachedir         MAE       SD    MedAE      P95
+4s     cache_w40      5.290    2.638    2.755   19.649
+6s     cache_w60      5.476    2.906    2.309   21.863
+8s     cache2         5.583    2.981    2.285   21.934
+最优窗长 = 4s (5.290)；8 s = 5.583，距最优 0.293 BPM
+
+[saved] results/winlen.mat

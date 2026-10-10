@@ -1,0 +1,25 @@
+=== EMB-01 cross-record verification ===
+--- s2 ---
+magic=0x3142FFFF clk=72000000 stack=256
+dense : mean=65.748 ms  banded: mean=5.908 ms
+est dense : 254/254 exact, worst |diff|=0.000 BPM, first mismatch=None
+est banded: 254/254 exact, worst |diff|=0.000 BPM, first mismatch=None
+
+--- ws1 ---
+magic=0x3142FFFF clk=72000000 stack=256
+dense : mean=65.745 ms  banded: mean=5.904 ms
+est dense : 254/254 exact, worst |diff|=0.000 BPM, first mismatch=None
+est banded: 254/254 exact, worst |diff|=0.000 BPM, first mismatch=None
+
+--- s3 ---
+magic=0x3142FFFF clk=72000000 stack=256
+dense : mean=65.749 ms  banded: mean=5.900 ms
+est dense : 254/254 exact, worst |diff|=0.000 BPM, first mismatch=None
+est banded: 254/254 exact, worst |diff|=0.000 BPM, first mismatch=None
+
+--- ws2 ---
+magic=0x3142FFFF clk=72000000 stack=256
+dense : mean=65.749 ms  banded: mean=5.903 ms
+est dense : 254/254 exact, worst |diff|=0.000 BPM, first mismatch=None
+est banded: 254/254 exact, worst |diff|=0.000 BPM, first mismatch=None
+

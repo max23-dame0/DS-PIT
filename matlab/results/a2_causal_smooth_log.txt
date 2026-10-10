@@ -1,0 +1,36 @@
+=== exp_a2_causal_smooth（输出滤波因果性对照）2026-09-23 18:59:47 ===
+
+--- 0) 复核现行口径（median）期望 5.8302 / 5.7569，CI [4.83,6.93] / [4.37,7.50] ---
+  dalia  MAE=5.8302  SD=2.1847  CI=[4.83, 6.93]  (n=15)
+  wesad  MAE=5.7569  SD=3.2355  CI=[4.37, 7.50]  (n=15)
+  复核结论：PASS（逐位复现现行口径）
+
+######## DALIA ########
+  act 标签取值：1   （与缓存一致；DaLiA 为逐窗活动标签）
+  [median   (centred, 14 s)] MAE=5.8302  SD=2.1847  CI=[4.81, 6.94]  Med=2.4129  P95=25.18  >10%=15.43%  cov=0.9993  有效窗=64652/64697
+  [mediancausal (trailing, 12 s)] MAE=6.1646  SD=2.1207  CI=[5.20, 7.25]  Med=2.8449  P95=25.45  >10%=16.23%  cov=0.9993  有效窗=64652/64697
+  [off      (none,    12 s)] MAE=5.8376  SD=2.1919  CI=[4.80, 6.95]  Med=2.4084  P95=25.22  >10%=15.54%  cov=0.9995  有效窗=64667/64697
+  [paired vs median]  delta(vs ref)   raw p    Holm p (m=2)
+    mediancausal      +0.3344     0.0002   0.0004
+    off               +0.0075     0.0241   0.0241
+  等待：median=14 s（8+4+2，含 1 帧未来）；mediancausal/off=12 s（8+4，无未来依赖）
+  有效窗总数：median=64652  medcausal=64652  off=64667  （相对 median：+15 / +0）
+
+######## WESAD ########
+  act 标签取值：[0 1 2 3 4 5 6 7]   （与缓存一致；DaLiA 为逐窗活动标签）
+  [median   (centred, 14 s)] MAE=5.7569  SD=3.2355  CI=[4.35, 7.49]  Med=2.4321  P95=22.30  >10%=15.09%  cov=1.0000  有效窗=22478/43385
+  [mediancausal (trailing, 12 s)] MAE=6.0283  SD=3.2150  CI=[4.64, 7.67]  Med=2.8271  P95=22.55  >10%=15.83%  cov=1.0000  有效窗=22478/43385
+  [off      (none,    12 s)] MAE=5.7629  SD=3.2377  CI=[4.33, 7.50]  Med=2.4212  P95=22.37  >10%=15.11%  cov=1.0000  有效窗=22478/43385
+  [paired vs median]  delta(vs ref)   raw p    Holm p (m=2)
+    mediancausal      +0.2714     0.0002   0.0004
+    off               +0.0060     0.0859   0.0859
+  等待：median=14 s（8+4+2，含 1 帧未来）；mediancausal/off=12 s（8+4，无未来依赖）
+  有效窗总数：median=22478  medcausal=22478  off=22478  （相对 median：+0 / +0）
+
+=== 结论摘要（供作者决策，未经 Astra/作者复核）===
+  dalia   median 5.8302 (14 s)  vs  causal 6.1646 (12 s)  →  Δ=+0.3344 BPM；无滤波 5.8376 → Δ=+0.0075 BPM
+  wesad   median 5.7569 (14 s)  vs  causal 6.0283 (12 s)  →  Δ=+0.2714 BPM；无滤波 5.7629 → Δ=+0.0060 BPM
+  注：本对照只覆盖主结果（headline）。嵌套 CV、延迟表、消融三处同样以平滑后的 es 计分，
+      若采用因果输出，需另行复算（见 REVISION_ALIGNMENT_20260923.md §B.5 触发条件）。
+
+[saved] results/a2_causal_smooth.mat

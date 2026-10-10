@@ -1,0 +1,30 @@
+
+######## DALIA ########
+  taper on,  filter on (headline) MAE=5.9584  bias=-2.2848  LoA=[-25.19, +20.62]  RMSE=11.9092
+  taper off, filter on           MAE=11.5261  bias=-9.3879  LoA=[-51.24, +32.47]  RMSE=23.3263
+  taper on,  filter off          MAE=5.9619  bias=-2.2854  LoA=[-25.23, +20.66]  RMSE=11.9262
+  taper off, filter off          MAE=11.5287  bias=-9.3928  LoA=[-51.26, +32.48]  RMSE=23.3349
+  --- HR-band strata (headline) ---
+  band      n      share     MAE    bias    >10%
+  <60        3745   5.79%  3745.00   +5.58   14.6%
+  60-90     34891  53.97%  34891.00   +4.02   10.3%
+  90-120    18911  29.25%  18911.00   +6.87   22.2%
+  120-150    6030   9.33%  6030.00  +13.21   25.0%
+  >=150      1075   1.66%  1075.00   +9.28   18.6%
+  coverage: local=0.9993  ds5=0.9993  mean missing windows/subject=3.00 (min 3, max 3)
+
+######## WESAD ########
+  taper on,  filter on (headline) MAE=5.7836  bias=-2.2310  LoA=[-23.87, +19.41]  RMSE=11.2645
+  taper off, filter on           MAE=9.2421  bias=-7.6240  LoA=[-41.66, +26.42]  RMSE=18.9669
+  taper on,  filter off          MAE=5.7865  bias=-2.2228  LoA=[-23.91, +19.47]  RMSE=11.2875
+  taper off, filter off          MAE=9.2350  bias=-7.6173  LoA=[-41.66, +26.42]  RMSE=18.9640
+  --- HR-band strata (headline) ---
+  band      n      share     MAE    bias    >10%
+  <60        2427  10.80%  2427.00   +4.46   12.6%
+  60-90     16369  72.82%  16369.00   +3.74    8.8%
+  90-120     2669  11.87%  2669.00  +12.27   43.6%
+  120-150     993   4.42%  993.00  +24.59   49.4%
+  >=150        20   0.09%   20.00  +46.68   50.0%
+  coverage: local=1.0000  ds5=1.0000  mean missing windows/subject=0.00 (min 0, max 0)
+
+[saved] results/bias_strata.mat

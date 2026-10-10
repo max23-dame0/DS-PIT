@@ -1,0 +1,62 @@
+records = 23
+--- smoothed with moving(4) ---
+macro MAE = 1.50036  SD = 1.54004      (REPRO-01 / manuscript: 1.50036 / 1.54004)
+--- unsmoothed ---
+macro MAE = 1.94162  SD = 1.60141      (REPRO-01: 1.94162 / 1.60141)
+--- per-record (smoothed) ---
+  S1   Result_DATA_01_TYPE01_DATA_WFPV_OVD_PISC.mat    0.7671
+  S2   Result_DATA_02_TYPE02_DATA_WFPV_OVD_PISC.mat    1.7813
+  S3   Result_DATA_03_TYPE02_DATA_WFPV_OVD_PISC.mat    0.4894
+  S4   Result_DATA_04_TYPE02_DATA_WFPV_OVD_PISC.mat    0.8757
+  S5   Result_DATA_05_TYPE02_DATA_WFPV_OVD_PISC.mat    0.6220
+  S6   Result_DATA_06_TYPE02_DATA_WFPV_OVD_PISC.mat    1.6759
+  S7   Result_DATA_07_TYPE02_DATA_WFPV_OVD_PISC.mat    0.3969
+  S8   Result_DATA_08_TYPE02_DATA_WFPV_OVD_PISC.mat    0.5705
+  S9   Result_DATA_09_TYPE02_DATA_WFPV_OVD_PISC.mat    0.3446
+  S10  Result_DATA_10_TYPE02_DATA_WFPV_OVD_PISC.mat    1.5452
+  S11  Result_DATA_11_TYPE02_DATA_WFPV_OVD_PISC.mat    0.8294
+  S12  Result_DATA_12_TYPE02_DATA_WFPV_OVD_PISC.mat    0.5944
+  S13  Result_DATA_S04_T01_DATA_WFPV_OVD_PISC.mat      2.7403
+  S14  Result_TEST_S01_T01_DATA_WFPV_OVD_PISC.mat      7.6811
+  S15  Result_TEST_S02_T01_DATA_WFPV_OVD_PISC.mat      1.0600
+  S16  Result_TEST_S02_T02_DATA_WFPV_OVD_PISC.mat      2.1921
+  S17  Result_TEST_S03_T02_DATA_WFPV_OVD_PISC.mat      2.0397
+  S18  Result_TEST_S04_T02_DATA_WFPV_OVD_PISC.mat      1.5160
+  S19  Result_TEST_S05_T02_DATA_WFPV_OVD_PISC.mat      0.8207
+  S20  Result_TEST_S06_T01_DATA_WFPV_OVD_PISC.mat      1.6235
+  S21  Result_TEST_S06_T02_DATA_WFPV_OVD_PISC.mat      2.9307
+  S22  Result_TEST_S07_T02_DATA_WFPV_OVD_PISC.mat      0.9962
+  S23  Result_TEST_S08_T01_DATA_WFPV_OVD_PISC.mat      0.4156
+worst record: 7.6811 (idx 14)   best: 0.3446 (idx 9)
+records with MAE>5: 1
+records = 23
+--- smoothed with moving(4) ---
+macro MAE = 1.50036  SD = 1.54004      (REPRO-01 / manuscript: 1.50036 / 1.54004)
+--- unsmoothed ---
+macro MAE = 1.94162  SD = 1.60141      (REPRO-01: 1.94162 / 1.60141)
+--- per-record (smoothed) ---
+  S1   Result_DATA_01_TYPE01_DATA_WFPV_OVD_PISC.mat    0.7671
+  S2   Result_DATA_02_TYPE02_DATA_WFPV_OVD_PISC.mat    1.7813
+  S3   Result_DATA_03_TYPE02_DATA_WFPV_OVD_PISC.mat    0.4894
+  S4   Result_DATA_04_TYPE02_DATA_WFPV_OVD_PISC.mat    0.8757
+  S5   Result_DATA_05_TYPE02_DATA_WFPV_OVD_PISC.mat    0.6220
+  S6   Result_DATA_06_TYPE02_DATA_WFPV_OVD_PISC.mat    1.6759
+  S7   Result_DATA_07_TYPE02_DATA_WFPV_OVD_PISC.mat    0.3969
+  S8   Result_DATA_08_TYPE02_DATA_WFPV_OVD_PISC.mat    0.5705
+  S9   Result_DATA_09_TYPE02_DATA_WFPV_OVD_PISC.mat    0.3446
+  S10  Result_DATA_10_TYPE02_DATA_WFPV_OVD_PISC.mat    1.5452
+  S11  Result_DATA_11_TYPE02_DATA_WFPV_OVD_PISC.mat    0.8294
+  S12  Result_DATA_12_TYPE02_DATA_WFPV_OVD_PISC.mat    0.5944
+  S13  Result_DATA_S04_T01_DATA_WFPV_OVD_PISC.mat      2.7403
+  S14  Result_TEST_S01_T01_DATA_WFPV_OVD_PISC.mat      7.6811
+  S15  Result_TEST_S02_T01_DATA_WFPV_OVD_PISC.mat      1.0600
+  S16  Result_TEST_S02_T02_DATA_WFPV_OVD_PISC.mat      2.1921
+  S17  Result_TEST_S03_T02_DATA_WFPV_OVD_PISC.mat      2.0397
+  S18  Result_TEST_S04_T02_DATA_WFPV_OVD_PISC.mat      1.5160
+  S19  Result_TEST_S05_T02_DATA_WFPV_OVD_PISC.mat      0.8207
+  S20  Result_TEST_S06_T01_DATA_WFPV_OVD_PISC.mat      1.6235
+  S21  Result_TEST_S06_T02_DATA_WFPV_OVD_PISC.mat      2.9307
+  S22  Result_TEST_S07_T02_DATA_WFPV_OVD_PISC.mat      0.9962
+  S23  Result_TEST_S08_T01_DATA_WFPV_OVD_PISC.mat      0.4156
+worst record: 7.6811 (idx 14)   best: 0.3446 (idx 9)
+records with MAE>5: 1
