@@ -320,6 +320,108 @@ def run_all_checks() -> VerificationSuite:
         tol=0.01,
     )
 
+    # 10. R2 End-to-End STM32F103 float32 Baseline (embedded_e2e_float32/results/results_summary_e2e.json)
+    e1_data = json.loads((ROOT / "embedded_e2e_float32" / "results" / "results_summary_e2e.json").read_text(encoding="utf-8"))
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E float32 Pooled Mean Latency (208.435 ms)",
+        float(e1_data["timing_pooled_5rec"]["total"]["mean_ms"]),
+        208.4354,
+        tol=0.02,
+    )
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E float32 Algo Static RAM (26,556 B)",
+        float(e1_data["memory_and_flash"]["ram"]["algorithm_static_ram_bytes"]),
+        26556.0,
+        tol=0.1,
+    )
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E float32 Algo Flash (21,799 B)",
+        float(e1_data["memory_and_flash"]["flash"]["algo_flash_total_bytes"]),
+        21799.0,
+        tol=0.1,
+    )
+
+    # 11. R2 End-to-End STM32F103 Fixed-Point Q31 (embedded_e2e_q31_opt/results/results_summary_e2e_opt.json)
+    e2_data = json.loads((ROOT / "embedded_e2e_q31_opt" / "results" / "results_summary_e2e_opt.json").read_text(encoding="utf-8"))
+    q31 = e2_data["variants"]["q31_opt"]
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E Q31 Pooled Mean Latency (27.061 ms)",
+        float(q31["timing_pooled_5rec"]["total"]["mean_ms"]),
+        27.0609,
+        tol=0.02,
+    )
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E Q31 Speedup vs float32 (7.70x)",
+        float(q31["timing_pooled_5rec"]["total"]["speedup_vs_e2e01"]),
+        7.70,
+        tol=0.02,
+    )
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E Q31 2-s Duty Factor (1.35%)",
+        float(q31["timing_pooled_5rec"]["total"]["duty_cycle_2s_pct"]),
+        1.35,
+        tol=0.02,
+    )
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E Q31 Algo Static RAM (26,416 B)",
+        float(q31["memory_and_flash"]["ram"]["algorithm_static_ram_bytes"]),
+        26416.0,
+        tol=0.1,
+    )
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E Q31 Stack High-Water Mark (1,528 B)",
+        float(q31["memory_and_flash"]["ram"]["stack_high_water_bytes"]),
+        1528.0,
+        tol=0.1,
+    )
+    suite.check_float(
+        "R2 Table IV & Table S17: E2E Q31 Total Firmware Flash (27,768 B)",
+        float(q31["memory_and_flash"]["flash"]["total_firmware_flash_bytes"]),
+        27768.0,
+        tol=0.1,
+    )
+
+    # 12. R2 Table S18 & Enriched 30-Subject / 4.25-h Hardware Endurance Checks
+    f30_data = json.loads((ROOT / "embedded_e2e_q31_opt" / "results" / "full30_host_eval.json").read_text(encoding="utf-8"))
+    suite.check_float(
+        "R2 Table S18: Full 15-Subject PPG-DaLiA C99 Q31 Macro MAE (5.8206 BPM)",
+        float(f30_data["summary"]["dalia"]["variants"]["q31opt"]["subject_macro_mae_bpm"]),
+        5.8206,
+        tol=0.005,
+    )
+    suite.check_float(
+        "R2 Table S18: Full 15-Subject WESAD C99 Q31 Macro MAE (5.7583 BPM)",
+        float(f30_data["summary"]["wesad"]["variants"]["q31opt"]["subject_macro_mae_bpm"]),
+        5.7583,
+        tol=0.005,
+    )
+    enr_data = json.loads((ROOT / "embedded_e2e_q31_opt" / "results" / "results_summary_q31_enriched.json").read_text(encoding="utf-8"))
+    suite.check_float(
+        "R2 Enriched Hardware: STM32F103 30-Subject Pooled Q31 Latency (26.637 ms)",
+        float(enr_data["prefix_30_subjects"]["pooled30"]["timing_total"]["mean_ms"]),
+        26.6371,
+        tol=0.02,
+    )
+    match_ok, match_den = map(int, enr_data["prefix_30_subjects"]["pooled30"]["host_match_es"].split("/"))
+    suite.check_float(
+        "R2 Enriched Hardware: STM32F103 30-Subject Exact Match Windows (7620)",
+        float(match_ok if match_ok == match_den else -1),
+        7620.0,
+        tol=0.1,
+    )
+    suite.check_float(
+        "R2 Enriched Hardware: STM32F103 Full DaLiA S1 MAE (5.0737 BPM)",
+        float(enr_data["endurance_full_recordings"]["dalia_S1"]["accuracy_mcu"]["mae"]),
+        5.0737,
+        tol=0.002,
+    )
+    suite.check_float(
+        "R2 Enriched Hardware: STM32F103 Full WESAD S2 MAE (3.4923 BPM)",
+        float(enr_data["endurance_full_recordings"]["wesad_S2"]["accuracy_mcu"]["mae"]),
+        3.4923,
+        tol=0.002,
+    )
+
     return suite
 
 

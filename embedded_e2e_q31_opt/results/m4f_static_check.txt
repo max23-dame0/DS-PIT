@@ -1,0 +1,20 @@
+=== E2E-02C Cortex-M4F (-mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -O3) Static Verification ===
+NOTE: Static cross-compile & disassembly check ONLY; runtime NOT hardware-measured (no M4F board).
+
+--- arm-none-eabi-size -A ---
+revision/audit/embedded_e2e_opt_20261124/fw/fw_m4f.elf  :
+section            size        addr
+.isr_vector          64   134217728
+.text             24148   134217792
+.data                80   536870912
+.bss              26280   536870992
+.mailbox           4136   536897272
+.ARM.attributes      52           0
+.debug_frame        712           0
+.debug_line_str     206           0
+Total             55678
+
+--- VFP hardware FPU instruction counts in fw_m4f.elf ---
+{'vmul.f32': 98, 'vmla.f32': 0, 'vfma.f32': 17, 'vadd.f32': 109, 'vsub.f32': 71, 'vsqrt.f32': 5, 'vdiv.f32': 17}
+Total matched VFP f32 arith insns: 317
+Soft-float __aeabi_fadd/sub/mul/div symbols in nm: 0

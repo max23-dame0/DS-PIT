@@ -48,12 +48,14 @@ Evaluated across **87,175 sliding windows** (30 subjects, $>48\text{ hours}$ tot
 | **WESAD** | 15 subjects / 22,478 windows | **5.76 $\pm$ 3.24** | **4.97 (4.27)** | 9.86 | 100.00% |
 | **IEEE SPC (Zero-Retuning)** | 23 recordings / 3,203 windows | **6.77 $\pm$ 9.22** | **3.17 (2.67)** | 10.28 | 97.81% |
 
-### C. Real-Hardware Embedded MCU Profiling (STM32F103C8T6, 72-MHz ARM Cortex-M3)
-Cycle-accurate DWT hardware profiling (`embedded_cortex_m3/`, bare-metal C99 without hardware FPU):
-| Decoder Implementation | Complexity | Mean Cycles / Hop | Mean Latency @ 72 MHz | Duty Cycle (2-s Hop) | Flash / SRAM / Stack | Numerical Parity vs. MATLAB |
-|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Dense Viterbi** | $\mathcal{O}(K^2)$ ($161 \times 161$) | 4,733,299 | 65.740 ms | 3.29% | 17.55 KB / 8.08 KB / 256 B | **254/254 exact (0.000 BPM)** |
-| **Banded Viterbi** | $\mathcal{O}(KW)$ ($W=13$, $\pm 3\sigma_{\text{SSC}}$) | **423,854** | **5.887 ms** (**11.17$\times$ speedup**) | **0.29%** | **17.55 KB / 8.08 KB / 256 B** | **254/254 exact (0.000 BPM)** |
+### C. Real-Hardware Embedded MCU Profiling (STM32F103, 72-MHz ARM Cortex-M3, No FPU)
+We separate **three explicit embedded measurement scopes** (SWD SRAM replay; live optical/IMU drivers, wireless radio, and direct hardware energy metering excluded, with energy derived solely from STM32F103 datasheet typical current projections):
+
+| Implementation Scope | Directory | Pooled Latency (2-s Hop) | Duty Factor | Algo Static RAM / Stack | Flash (Algo / Total FW) | Scope & Full-Cohort Parity |
+|:---|:---|:---:|:---:|:---:|:---:|:---|
+| **R1 Standalone Raw Kernel ($\tau_t=1$)** | `embedded_cortex_m3/` | **5.887 ms** (dense 65.74 ms) | 0.29% (kernel only) | 3.2 kB RAM / 256 B stack (8.08 kB SRAM w/ test harness) | $\approx$4.7 kB code | Stage-2 banded Viterbi ($W=13$) on offline obs. only (`S1–S4`, `S6`, $\tau_t$ excl.); `254/254` exact |
+| **R2 Full End-to-End DSP (`float32` `-O2`)** | `embedded_e2e_float32/` | **208.44 ms** (P95 224.01 ms; DaLiA 223.71 / WESAD 185.52) | 10.42% | **26.6 kB** (26,556 B) / 2.2 kB stack (2,192 B) | **21.8 kB** / 22.8 kB | Complete **S1–S6** DSP chain (`float32` soft-float); C99 MAE **5.827 / 5.760 BPM** (30 subj.) |
+| **R2 Full End-to-End DSP (`Q31` `-O3`)** | `embedded_e2e_q31_opt/` | **27.06 ms** (**7.70$\times$ speedup**; P95 28.88 ms; 30-subj. MCU **26.64 ms**) | **1.35%** (30-subj. **1.33%**) | **26.4 kB** (26,416 B) / **1.5 kB** stack (1,528 B) | **26.8 kB** / **27.8 kB** | Complete **S1–S6** fixed-point (`Q50/Q31/Q16` + pruned FFT + sym.\ FIR); C99 MAE **5.821 / 5.758 BPM**; **`15,253/15,253 (100%)`** MCU match |
 
 ---
 
@@ -95,15 +97,27 @@ DS-PIT/
 │  ├─ ieee25_control/                # Supp Section S1.1: 25-Hz vs. 125-Hz sampling rate control
 │  └─ pv_factorial/                  # Supp Section S3 & Table S5: Phase Vocoder 2x2 factorial
 │
-├─ embedded_cortex_m3/               # STM32F103C8T6 (72-MHz ARM Cortex-M3) real-hardware benchmark
-│  ├─ fw/                            # Bare-metal C99 firmware (main.c, startup.c, stm32f103.ld, Makefile)
+├─ embedded_cortex_m3/               # R1 standalone tau_t=1 raw Viterbi kernel (5.89 ms, 3.2 kB RAM)
+│  ├─ fw/                            # Bare-metal C99 kernel (main.c, startup.c, stm32f103.ld, Makefile)
 │  ├─ check_results.py               # Binary capture verifier & cycle/latency statistics
 │  ├─ energy_estimate.py             # Datasheet-bounded energy & average power calculator
 │  ├─ analyze_matrix.py              # Multi-clock (24/48/72 MHz) & multi-bandwidth (W=7/13/25) analyzer
 │  └─ results/                       # Hardware SWD RAM dumps (fw_results.bin, matrix/*.bin) & summaries
 │
+├─ embedded_e2e_float32/             # R2 complete S1-S6 end-to-end DSP in C99 float32 (208.44 ms, 26.6 kB RAM)
+│  ├─ src/                           # Modular C99 stages (fe_filter, fe_resample, spec, enhance, lbp, decode, smooth)
+│  ├─ fw/                            # STM32F103 bare-metal mailbox firmware (fw.elf, fw.bin, fw.map)
+│  ├─ host_test/ & host_driver/      # Double/float32 parity verifier & OpenOCD SWD replay driver
+│  └─ results/                       # STM32F103 SWD captures & results_summary_e2e.json
+│
+├─ embedded_e2e_q31_opt/             # R2 optimized S1-S6 fixed-point Q31 (27.06 ms, 7.70x) & f32-opt + M4F static
+│  ├─ src_q31_opt/ & src_f32_opt/    # Fixed-point Q50/Q31/Q16 and pruned float32 C99 DSP pipelines
+│  ├─ fw/                            # STM32F103/M4F firmware images (fw_q31_opt.elf, fw_f32_opt.elf, fw_m4f.elf)
+│  ├─ host_test/ & host_driver/      # Full 30-subject C99 parity harness + enriched 30-subj/4.25-h MCU runner
+│  └─ results/                       # results_summary_e2e_opt.json, full30_host_eval.json, mcu_q31_enriched/
+│
 ├─ scripts/                          # Python statistical analyzers & automated paper verifier
-│  ├─ verify_paper_results.py        # 38-point automated consistency check against paper & supplement
+│  ├─ verify_paper_results.py        # 53-point automated consistency check (MATLAB + R2 embedded E2E)
 │  ├─ analyze_predictions.py         # Nonparametric bootstrap CI, exact sign-flip, and Holm-Bonferroni CLI
 │  └─ four_arm_stats.py              # Four-arm factorial paired contrast & Monte Carlo analyzer
 │
@@ -115,7 +129,7 @@ DS-PIT/
 
 ## 4. Quickstart Verification (Under 5 Seconds)
 
-### A. Verify All 38 Paper & Supplementary Metrics via Python (No MATLAB Required)
+### A. Verify All 53 Paper & Supplementary Metrics via Python (No MATLAB Required)
 Run the automated consistency verifier and unit test suite using standard Python 3 (zero third-party dependencies required):
 
 ```bash
@@ -123,7 +137,7 @@ python scripts/verify_paper_results.py
 python -m unittest discover -s tests -v
 ```
 
-- `scripts/verify_paper_results.py` checks **38 headline metrics** across Main Tables I, III, IV, Main Figs. 6–8, Main Sections III-C through III-F, and Supplementary Sections S1–S6 against the saved experimental outputs (`38 passed, 0 failed`).
+- `scripts/verify_paper_results.py` checks **53 headline metrics** across Main Tables I, III, IV, Main Figs. 6–8, Main Sections III-B through III-F, Supplementary Sections S1–S7 (Tables S17–S18), and the STM32F103 end-to-end `float32`/`Q31` + 30-subject hardware captures against the saved experimental outputs (`53 passed, 0 failed`).
 - `unittest discover` runs **18 unit and reproducibility tests** verifying the exact sign-flip permutation engine, Holm-Bonferroni step-down correction, cluster bootstrap confidence intervals, and paper-to-log numerical identity.
 
 ### B. Live MATLAB Reproduction
@@ -147,7 +161,9 @@ run_all_experiments('recompute_all') % Re-executes all experiment drivers and re
 | **Main Fig. 6 & Sec. III-C** | Four-arm factorial ablation (Baseline, +SSC, +LBP, Full DS-PIT) | `matlab/exp_a2_fig_boxplot.m` | `matlab/results/a2_fig_boxplot_macro_lbp_log.txt` |
 | **Main Fig. 7 & Sec. III-D** | Representative HR tracking trajectories (IEEE SPC Rec. 22 & PPG-DaLiA S5) | `matlab/exp_a2_fig_traj_arms.m` | `matlab/results/a2_fig_traj_arms_log.txt` |
 | **Main Fig. 8 & Sec. III-E** | Sensitivity to transition bandwidth $\sigma_{\text{SSC}}$ & smoother lag $D$ | `matlab/exp_a2_fig_sens.m` | `matlab/results/a2_tables_log.txt` |
-| **Main Sec. III-F & Supp Sec. S6** | STM32F103 Cortex-M3 cycle-accurate latency, memory, and energy profiling | `embedded_cortex_m3/check_results.py` | `embedded_cortex_m3/results/mcu_check_summary.txt` |
+| **Main Sec. III-F & Supp Sec. S6** | STM32F103 R1 standalone $\tau_t=1$ raw Viterbi decoder profiling | `embedded_cortex_m3/check_results.py` | `embedded_cortex_m3/results/mcu_check_summary.txt` |
+| **Main Table IV, Sec. III-B.2 & Supp Table S17** | R2 complete S1–S6 STM32F103 profiling (`float32` 208.4 ms vs. `Q31` 27.1 ms, 7.70x) | `embedded_e2e_float32/analyze_e2e.py`, `embedded_e2e_q31_opt/analyze_e2e_opt.py` | `embedded_e2e_*/results/results_summary_e2e*.json` |
+| **Supp Sec. S7 & Table S18** | Full 30-subject host C99 parity (`5.82/5.76 BPM`) & STM32F103 30-subj/4.25-h runs | `embedded_e2e_q31_opt/host_test/eval_full30.py`, `analyze_q31_enriched.py` | `full30_host_eval.json`, `results_summary_q31_enriched.json` |
 | **Supp Sec. S1.1** | Isolated 25-Hz vs. 125-Hz sampling rate control on IEEE SPC | `supplementary_controls/ieee25_control/run_ieee25_isolated.m` | `supplementary_controls/ieee25_control/results.json` |
 | **Supp Sec. S1.2** | Window length sensitivity ($6, 8, 10, 12\text{ s}$) on PPG-DaLiA & WESAD | `matlab/prep_winlen.m` | `matlab/results/SUPPLEMENTARY_STATISTICS_20261007.csv` |
 | **Supp Sec. S2.1 & Table S3** | $2 \times 2$ transition prior vs. spectral support factorial on IEEE SPC | `matlab/exp_ieee_prior_split.m` | `matlab/results/ieee_prior_split_log.txt` |

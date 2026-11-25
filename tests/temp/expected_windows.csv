@@ -1,0 +1,6 @@
+dataset,subject_id,recording_id,window_id,window_start_s,window_end_s,target_time_s,reference_bpm,split,activity
+SYNTH,S01,R01,W1,0,8,4,70,test,rest
+SYNTH,S01,R01,W2,8,16,12,80,test,rest
+SYNTH,S01,R01,W3,16,24,20,90,test,walking
+SYNTH,S01,R02,W1,0,8,4,100,test,rest
+SYNTH,S02,R01,W1,0,8,4,120,test,walking

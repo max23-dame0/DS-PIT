@@ -1,6 +1,6 @@
 # DS-PIT Reproducibility Guide
 
-This document provides step-by-step instructions to reproduce every table, figure, statistical test, and hardware profiling result reported in **JBHI-01577-2026** (*A Dual-Scale Tracking Framework for Robust PPG-based Heart Rate Estimation in Daily Life and Exercise*) and its **Supplementary Materials (Sections S1–S6)**.
+This document provides step-by-step instructions to reproduce every table, figure, statistical test, and hardware profiling result reported in **JBHI-01577-2026** (*A Dual-Scale Tracking Framework for Robust PPG-based Heart Rate Estimation in Daily Life and Exercise*) and its **Supplementary Materials (Sections S1–S7)**, including the end-to-end STM32F103 C99 pipelines (`embedded_e2e_float32/` and `embedded_e2e_q31_opt/`).
 
 ---
 
@@ -10,7 +10,7 @@ To support fast verification as well as full end-to-end recomputation, this repo
 
 | Tier | Requirements | Execution Time | What It Verifies |
 |:---|:---|:---:|:---|
-| **Tier 1: Instant Log & Artifact Audit** | Python $\ge 3.8$ (standard library only) | $< 2\text{ s}$ | Verifies 38 headline numbers across Main & Supplement + 18 unit tests (`scripts/verify_paper_results.py`). |
+| **Tier 1: Instant Log & Artifact Audit** | Python $\ge 3.8$ (standard library only) | $< 2\text{ s}$ | Verifies 53 headline numbers across Main & Supplement (incl.\ E2E `float32` / `Q31` & 30-subj.\ parity) + 18 unit tests (`scripts/verify_paper_results.py`). |
 | **Tier 2: Live Tracker & Statistical Evaluation** | MATLAB R2021a+ & Spectral Cache (`cache2/`) | $\sim 15\text{ s}$ | Executes `ds5.m` with `a2_cfg.m` across all 53 recordings/subjects (90,378 windows) and regenerates all tables/figures (`run_all_experiments.m`). |
 | **Tier 3: Full Raw-Signal Preprocessing & Hardware Build** | Raw Public Datasets + `arm-none-eabi-gcc` | $\sim 10\text{ min}$ | Rebuilds `cache2/` from raw PPG/ACC/ECG waveforms (`prep_ieee.m`, `prep_dump2.m`) and compiles the bare-metal STM32F103 firmware (`embedded_cortex_m3/fw/Makefile`). |
 
@@ -121,3 +121,24 @@ make clean && make
 arm-none-eabi-size build/dspit_m3.elf
 ```
 See [`embedded_cortex_m3/REPRODUCTION.md`](embedded_cortex_m3/REPRODUCTION.md) for OpenOCD flashing and SWD SRAM dump commands.
+
+---
+
+## 5. Tier 3 (Continued): End-to-End C99 `float32` & Fixed-Point `Q31` STM32F103 Pipelines (`embedded_e2e_float32/`, `embedded_e2e_q31_opt/`)
+
+Whereas `embedded_cortex_m3/` isolates only the temperature-disabled ($\tau_t=1$) Viterbi decoding kernel on offline spectral observations (`5.89 ms`, `3.2 kB RAM`), the two end-to-end directories implement all six DS-PIT stages (`S1–S6`) in modular C99:
+
+### A. Cross-Compile Bare-Metal Firmware (`arm-none-eabi-gcc`)
+```bash
+cd embedded_e2e_float32/fw && make clean && make   # Builds fw.elf (soft-float float32, 208.44 ms/step)
+cd ../../embedded_e2e_q31_opt/fw && make clean && make   # Builds fw_q31_opt.elf (27.06 ms/step), fw_f32_opt.elf, fw_m4f.elf
+```
+
+### B. Full 30-Subject Host C99 Parity (`gcc` + `DSPIT_DATA_ROOT`)
+```bash
+cd embedded_e2e_q31_opt/host_test
+make && make run_full30
+export DSPIT_DATA_ROOT=/path/to/your/datasets
+python eval_full30.py
+```
+This runs the exact STM32F103 C99 sources (`float32`, `float32-opt`, `Q31`) across all 15 PPG-DaLiA and 15 WESAD unsegmented recordings (`87,130` valid windows), verifying subject-macro MAEs of `5.8206` / `5.7583 BPM` vs. MATLAB `5.8302` / `5.7569 BPM`. Notice that SWD replay omits live optical/IMU sensor drivers, wireless radio stacks, and direct hardware power measurement; `fw_m4f.elf` is a static VFP disassembly verification only.
